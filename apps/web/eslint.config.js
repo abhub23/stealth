@@ -1,4 +1,11 @@
-import { nextJsConfig } from "@repo/eslint-config/next-js";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 /** @type {import("eslint").Linter.Config[]} */
-export default nextJsConfig;
+const eslintConfig = [
+  { ignores: ["node_modules/**", ".next/**", "dist/**"] },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+];
+
+export default eslintConfig;
