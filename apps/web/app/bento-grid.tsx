@@ -2,9 +2,9 @@
 
 import { AreaChart, Area, LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { TrendingUp, Users, Zap, Database, Lock, Code2, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react'
 
-// Chart data
+
 const chartData = [
   { month: 'Jan', value: 400, value2: 240 },
   { month: 'Feb', value: 300, value2: 320 },
