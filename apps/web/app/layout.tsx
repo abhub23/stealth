@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Arimo } from "next/font/google";
 import "./globals.css";
 
-
 const arimo_font = Arimo({
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
-
 
 const arimo = arimo_font.className;
 
