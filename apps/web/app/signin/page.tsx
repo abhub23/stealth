@@ -120,7 +120,7 @@ export function Page({
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  className="h-6 w-6"
+                  className="size-5"
                 >
                   <path
                     fill="#4285F4"
@@ -143,7 +143,7 @@ export function Page({
               </Button>
             </Field>
 
-            <p className="text-center text-sm text-muted-foreground mt-4">
+            <p className="text-center text-sm text-muted-foreground">
               Don&apos;t have an account?{" "}
               <Link
                 href="/signup"
