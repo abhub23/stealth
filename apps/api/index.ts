@@ -9,6 +9,7 @@ const app = new Elysia({prefix: '/api/v1'})
     return status(200, {message: "Server is healthy"})
 })
 
+.post()
 
 .listen(config.port, () => {
     console.log(`server listening on port ${config.port}`);
