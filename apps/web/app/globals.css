@@ -38,6 +38,8 @@
   --foreground: #e8e6e3;
 }
 
+/* #14120b */
+
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: var(--font-mono);

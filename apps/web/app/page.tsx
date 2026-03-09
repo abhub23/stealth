@@ -1,5 +1,5 @@
-import Navbar from "./navbar";
-import BentoGrid from "./bento-grid";
+import Navbar from "../src/components/navbar";
+import BentoGrid from "../src/components/bento-grid";
 
 export default function Home() {
   return (
