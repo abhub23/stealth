@@ -11,25 +11,25 @@ export default function Navbar() {
         <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8">
           <Link
             href="#"
-            className="text-md text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             Docs
           </Link>
           <Link
             href="#"
-            className="text-md text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             Pricing
           </Link>
           <Link
             href="/about"
-            className="text-md text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             About
           </Link>
           <Link
             href="#"
-            className="text-md text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             Customers
           </Link>
