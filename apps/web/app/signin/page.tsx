@@ -44,8 +44,9 @@ export function Page({
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="h-screen flex flex-col items-center p-4 pt-20 pb-6 overflow-hidden">
+      <div className="flex-1 flex items-center justify-center w-full">
+        <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-medium mb-2">Welcome back</h1>
           <p className="text-muted-foreground text-sm">
@@ -76,7 +77,7 @@ export function Page({
                 <FieldLabel htmlFor="password">Password</FieldLabel>
                 <Link
                   href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-0.5 hover:bg-[length:100%_1px]"
                 >
                   Forgot password?
                 </Link>
@@ -147,14 +148,22 @@ export function Page({
               Don&apos;t have an account?{" "}
               <Link
                 href="/signup"
-                className="text-foreground hover:underline underline-offset-4"
+                className="text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-0.5 hover:bg-[length:100%_1px]"
               >
                 Sign up
               </Link>
             </p>
           </FieldGroup>
         </form>
+        </div>
       </div>
+
+      <p className="shrink-0 mt-6 text-center text-sm text-muted-foreground">
+        By signing in you agree to our{" "}
+        <Link href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">Terms of Service</Link>
+        {" "}&amp;{" "}
+        <Link href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">Privacy Policy</Link>
+      </p>
     </div>
   );
 }
