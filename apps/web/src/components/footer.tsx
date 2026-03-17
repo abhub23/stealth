@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Github, Twitter, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
-  const linkStyles = "text-sm text-muted-foreground hover:text-white transition-colors duration-300 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right hover:after:origin-bottom-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300 after:bg-white";
+  const linkStyles = "text-sm text-muted-foreground hover:text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-1 hover:bg-[length:100%_1px]";
 
   return (
     <footer className="relative border-t border-white/5 bg-background pt-20 pb-12 overflow-hidden selection:bg-primary/30">
@@ -60,7 +60,6 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li><Link href="#" className={linkStyles}>Documentation</Link></li>
                 <li><Link href="#" className={linkStyles}>API Reference</Link></li>
-                <li><Link href="#" className={linkStyles}>Blog</Link></li>
                 <li><Link href="#" className={linkStyles}>Community Support</Link></li>
               </ul>
             </div>
@@ -69,7 +68,6 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">Company</h3>
               <ul className="space-y-4">
                 <li><Link href="#" className={linkStyles}>About Us</Link></li>
-                <li><Link href="#" className={linkStyles}>Careers</Link></li>
                 <li><Link href="#" className={linkStyles}>Contact</Link></li>
                 <li>
                   <Link href="#" className={`${linkStyles} !inline-flex items-center gap-1.5 group`}>
