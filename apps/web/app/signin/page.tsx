@@ -47,10 +47,10 @@ export function Page({
     <div className="h-screen flex flex-col items-center p-4 pt-20 pb-6 overflow-hidden">
       <div className="flex-1 flex items-center justify-center w-full">
         <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-medium mb-2">Welcome back</h1>
+        <div className="text-center">
+          <h1 className="text-3xl font-medium mb-2">Welcome to Stealth</h1>
           <p className="text-muted-foreground text-sm">
-            Enter your email to sign in to your account
+            Sign in to your account
           </p>
         </div>
 
