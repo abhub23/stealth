@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-background/80 backdrop-blur-md">
-      <div className="h-full max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8">
+      <div className="h-full max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8">
         <Link href="/" className="text-xl font-bold text-foreground">Stealth</Link>
 
         {/* Desktop Navigation */}
@@ -31,18 +32,12 @@ export default function Navbar() {
         {/* Desktop CTA & Mobile Toggle */}
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/signin"
-              className="text-sm px-3 py-[6px] rounded-full border border-white/20 text-foreground hover:text-foreground/80 transition-colors"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/signup"
-              className="text-sm px-3 py-[6px] rounded-full bg-foreground text-background hover:bg-foreground/90 transition-colors"
-            >
-              Get Started
-            </Link>
+            <Button size='lg' variant="outline" className="rounded-md border-none" asChild>
+              <Link href="/signin">Sign In</Link>
+            </Button>
+            <Button size='lg' className="rounded-md" asChild>
+              <Link href="/signup">Get Started</Link>
+            </Button>
           </div>
 
           <button
@@ -77,23 +72,15 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="w-full h-[1px] bg-white/10"></div>
+          <div className="w-full h-px bg-white/10"></div>
           
           <div className="flex flex-col gap-3">
-            <Link
-              href="/signin"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm px-4 py-2.5 rounded-full border border-white/20 text-foreground hover:text-foreground/80 transition-colors text-center w-full focus:outline-none"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/signup"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm px-4 py-2.5 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-colors text-center w-full focus:outline-none"
-            >
-              Get Started
-            </Link>
+            <Button variant="outline" className="rounded-full border-white/20 w-full" asChild>
+              <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>Sign In</Link>
+            </Button>
+            <Button className="rounded-md w-full" asChild>
+              <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
+            </Button>
           </div>
         </div>
       )}
