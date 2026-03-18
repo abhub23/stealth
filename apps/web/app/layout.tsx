@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Arimo } from "next/font/google";
+import { lexend } from "@/lib/font";
 import "./globals.css";
-
-const arimo_font = Arimo({
-  subsets: ["latin"],
-});
-
-const arimo = arimo_font.className;
 
 export const metadata: Metadata = {
   title: "Stealth",
@@ -20,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${arimo} bg-background text-foreground`}>
+      <body className={`${lexend} bg-background text-foreground`}>
         {children}
       </body>
     </html>
