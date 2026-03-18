@@ -2,28 +2,27 @@
 
 import { ArrowRight } from "lucide-react";
 import DecryptedText from "./DecryptedText";
+import { Button } from "@/components/ui/button";
 
 export default function CTA() {
   return (
     <section className="relative py-32 overflow-hidden px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Content Column */}
-          <div className="flex flex-col items-start text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-foreground">
-              <DecryptedText text={"Supercharge your workflow with\nnext-generation AI"} />
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb leading-tight text-foreground">
+              <DecryptedText text={"Build your Agents, Confidently"} />
             </h2>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12">
-              Stop writing boilerplate. Let our autonomous agents handle the repetitive tasks so you can focus on building extraordinary products.
+            <p className="text-lg text-muted-foreground max-w-xl mb-6">
+              Stop writing boilerplate. Let our agents handle.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
-              <button className="h-12 px-8 rounded-full bg-foreground text-background hover:bg-foreground/90 font-medium transition-colors flex items-center justify-center gap-2 group cursor-pointer">
+              <Button size="lg" className="rounded-md h-12 px-6 text-base group cursor-pointer">
                 Get Started
-                <ArrowRight className="w-4 h-4 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
-              </button>
+                <ArrowRight className="size-5 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
+              </Button>
             </div>
 
             <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
@@ -41,13 +40,7 @@ export default function CTA() {
               </div>
             </div>
           </div>
-
-          {/* Right Placeholder Column (For Future Component) */}
-          <div className="w-full flex justify-center lg:justify-end">
-            {/* The right side is intentionally left empty for the user to add a component later */}
-          </div>
           
-        </div>
       </div>
     </section>
   );
