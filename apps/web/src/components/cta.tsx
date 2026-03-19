@@ -1,45 +1,77 @@
-'use client'
+"use client";
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
 
 export default function CTA() {
   return (
     <section className="relative py-32 overflow-hidden px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-          
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb leading-tight text-foreground">
-              Build your Agents, Confidently
-            </h2>
+        <div className="flex flex-col items-center text-center">
+          <motion.h2
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              type: "spring",
+              stiffness: 150,
+              damping: 10,
+            }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-foreground"
+          >
+            Build your Agents, Confidently
+          </motion.h2>
 
-            <p className="text-lg text-muted-foreground max-w-xl mb-6">
-              Stop writing boilerplate. Let our agents handle.
-            </p>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              type: "spring",
+              stiffness: 150,
+              damping: 10,
+            }}
+            className="text-lg text-muted-foreground max-w-xl mb-6"
+          >
+            Stop writing boilerplate. Let our agents handle.
+          </motion.p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
-              <Button size="lg" className="rounded-md h-12 px-6 text-base group cursor-pointer">
-                Get Started
-                <ArrowRight className="size-5 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
-              </Button>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              type: "spring",
+              stiffness: 150,
+              damping: 10,
+            }}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2"
+          >
+            <Button
+              size="lg"
+              className="rounded-md h-12 px-6 text-base group cursor-pointer"
+            >
+              Get Started
+              <ArrowRight className="size-5 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
+            </Button>
+          </motion.div>
+
+          <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              No credit card required
             </div>
-
-            <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                No credit card required
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                14-day free trial
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Cancel anytime
-              </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              14-day free trial
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              Cancel anytime
             </div>
           </div>
-          
+        </div>
       </div>
     </section>
   );
