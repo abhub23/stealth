@@ -1,7 +1,6 @@
 'use client'
 
 import { ArrowRight } from "lucide-react";
-import DecryptedText from "./DecryptedText";
 import { Button } from "@/components/ui/button";
 
 export default function CTA() {
@@ -11,7 +10,7 @@ export default function CTA() {
           
           <div className="flex flex-col items-center text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb leading-tight text-foreground">
-              <DecryptedText text={"Build your Agents, Confidently"} />
+              Build your Agents, Confidently
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-xl mb-6">
