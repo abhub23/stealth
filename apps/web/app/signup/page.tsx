@@ -3,11 +3,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
@@ -21,13 +17,12 @@ export function Page({
   searchParams: _searchParams,
   ...props
 }: PageProps) {
-
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const handleGoogleLogin = async () => { };
+  const handleGoogleLogin = async () => {};
 
   const handleEmailPasswordSignup = async (
-    e: React.FormEvent<HTMLFormElement>
+    e: React.FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -117,7 +112,8 @@ export function Page({
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center">
-                      Creating account <Loader2 className="ml-2 size-4 animate-spin" />
+                      Creating account{" "}
+                      <Loader2 className="ml-2 size-4 animate-spin" />
                     </span>
                   ) : (
                     "Sign Up"
@@ -184,9 +180,19 @@ export function Page({
 
       <p className="shrink-0 mt-6 text-center text-sm text-muted-foreground">
         By signing in you agree to our{" "}
-        <Link href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">Terms of Service</Link>
-        {" "}&amp;{" "}
-        <Link href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">Privacy Policy</Link>
+        <Link
+          href="#"
+          className="underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          Terms of Service
+        </Link>{" "}
+        &amp;{" "}
+        <Link
+          href="#"
+          className="underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          Privacy Policy
+        </Link>
       </p>
     </div>
   );
