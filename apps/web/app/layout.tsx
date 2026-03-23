@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { lexend } from "@/lib/font";
 import "./globals.css";
+import { ThemeProvider } from "next-themes"
+import ReactQueryProvider from "@/lib/react-query-provider";
 
 export const metadata: Metadata = {
   title: "Stealth",
@@ -13,9 +15,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${lexend} bg-background text-foreground`}>
-        {children}
+        <ReactQueryProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );
