@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,6 +63,7 @@ export default function Navbar() {
 
         {/* Desktop CTA & Mobile Toggle */}
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <div className="hidden md:flex items-center gap-3">
             <Button
               size="lg"
