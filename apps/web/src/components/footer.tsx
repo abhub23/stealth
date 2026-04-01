@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { XIcon, GithubIcon, LinkedInIcon, MailIcon } from "./logos";
 
 export default function Footer() {
   const linkStyles =
@@ -38,30 +39,30 @@ export default function Footer() {
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-white transition-colors duration-300"
-                aria-label="Twitter"
+                aria-label="X (formerly Twitter)"
               >
-                <Twitter className="h-5 w-5" />
+                <XIcon className="size-5" />
               </Link>
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-white transition-colors duration-300"
                 aria-label="GitHub"
               >
-                <Github className="h-5 w-5" />
+                <GithubIcon className="size-5" />
               </Link>
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-white transition-colors duration-300"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <LinkedInIcon className="size-5" />
               </Link>
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-white transition-colors duration-300"
                 aria-label="Email Address"
               >
-                <Mail className="h-5 w-5" />
+                <MailIcon className="size-5" />
               </Link>
             </div>
           </div>
