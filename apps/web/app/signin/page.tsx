@@ -76,7 +76,7 @@ export function Page({
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <Link
                     href="#"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-0.5 hover:bg-[length:100%_1px]"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Forgot password?
                   </Link>
@@ -154,7 +154,7 @@ export function Page({
                 Don&apos;t have an account?{" "}
                 <Link
                   href="/signup"
-                  className="text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-0.5 hover:bg-[length:100%_1px]"
+                  className="hover:text-foreground transition-colors"
                 >
                   Sign up
                 </Link>

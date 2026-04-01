@@ -168,7 +168,7 @@ export function Page({
                 Already have an account?{" "}
                 <Link
                   href="/signin"
-                  className="text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-0.5 hover:bg-[length:100%_1px]"
+                  className="hover:text-foreground transition-colors"
                 >
                   Sign in
                 </Link>
