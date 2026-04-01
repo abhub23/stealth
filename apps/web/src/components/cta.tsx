@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
+import { literata } from "@/lib/font";
 
 export default function CTA() {
   return (
@@ -20,7 +21,23 @@ export default function CTA() {
             }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-foreground"
           >
-            Build your Agents, Confidently
+            Build your Agents,{" "}
+            <span className={`relative inline-block ${literata} px-1`}>
+              Confidently
+              <svg
+                className="absolute w-[105%] h-[0.4em] -bottom-[0.1em] -left-[2.5%] text-primary/80 z-[-1] drop-shadow-sm"
+                viewBox="0 0 100 20"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M 2 15 C 20 5, 45 18, 75 10 C 85 8, 95 12, 98 14"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
           </motion.h2>
 
           <motion.p
