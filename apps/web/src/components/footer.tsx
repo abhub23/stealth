@@ -38,28 +38,28 @@ export default function Footer() {
             <div className="flex items-center gap-5">
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-white transition-colors duration-300"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                 aria-label="X (formerly Twitter)"
               >
                 <XIcon className="size-5" />
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-white transition-colors duration-300"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                 aria-label="GitHub"
               >
                 <GithubIcon className="size-5" />
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-white transition-colors duration-300"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon className="size-5" />
               </Link>
               <Link
                 href="#"
-                className="text-muted-foreground hover:text-white transition-colors duration-300"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                 aria-label="Email Address"
               >
                 <MailIcon className="size-5" />
