@@ -63,7 +63,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
           >
             <Button
               size="lg"
@@ -74,7 +74,7 @@ export default function CTA() {
             </Button>
           </motion.div>
 
-          <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
+          {/* <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               No credit card required
@@ -87,7 +87,7 @@ export default function CTA() {
               <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               Cancel anytime
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
