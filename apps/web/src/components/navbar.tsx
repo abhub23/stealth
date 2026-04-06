@@ -130,15 +130,16 @@ export default function Navbar() {
 
           <div className="flex flex-col gap-3">
             <Button
+            size='lg'
               variant="outline"
-              className="rounded-full border-white/20 w-full"
+              className="rounded-md border-white/20 w-full font-bold text-sm"
               asChild
             >
               <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>
                 Sign In
               </Link>
             </Button>
-            <Button className="rounded-md w-full" asChild>
+            <Button size='lg' className="rounded-md w-full font-bold text-sm" asChild>
               <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>
                 Get Started
               </Link>
