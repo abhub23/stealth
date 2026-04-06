@@ -25,15 +25,15 @@ export default function CTA() {
             <span className={`relative inline-block ${literata} px-1`}>
               Confidently
               <svg
-                className="absolute w-[105%] h-[0.4em] -bottom-[0.1em] -left-[2.5%] text-primary/80 z-[-1] drop-shadow-sm"
+                className="absolute w-[102%] h-[0.4em] -bottom-[0.1em] -left-[1%] text-primary/80 z-[-1] drop-shadow-sm"
                 viewBox="0 0 100 20"
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M 2 15 C 20 5, 45 18, 75 10 C 85 8, 95 12, 98 14"
+                  d="M 2 14 C 15 16, 30 12, 50 13 C 70 14, 85 11, 98 15"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="3"
+                  strokeWidth="2.5"
                   strokeLinecap="round"
                 />
               </svg>
