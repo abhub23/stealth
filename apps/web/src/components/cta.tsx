@@ -4,10 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { literata } from "@/lib/font";
+import { SplitCard } from "./split-image";
 
 export default function CTA() {
   return (
-    <section className="relative py-32 overflow-hidden px-6">
+    <section className="relative py-32 px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <motion.h2
@@ -88,6 +89,8 @@ export default function CTA() {
               Cancel anytime
             </div>
           </div> */}
+
+          <SplitCard />
         </div>
       </div>
     </section>
