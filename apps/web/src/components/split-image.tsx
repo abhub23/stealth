@@ -4,6 +4,8 @@ export function SplitCard() {
   return (
     <ScrollSplitCard
       imageSrc="/scene.jpg"
+      width="1000px"
+      height="500px"
       cards={[
         {
           title: "Going Zero to One",
