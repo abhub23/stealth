@@ -51,43 +51,43 @@ export function ScrollSplitCard({
     offset: ["start start", "end end"],
   });
 
-  // Stage 1 to 2: Separation (0 to 0.4), then Stage 2 to 3: Overlap closer (0.4 to 0.8)
-  const leftX = useTransform(scrollYProgress, [0, 0.4, 0.8], [0, -48, -24]);
-  const rightX = useTransform(scrollYProgress, [0, 0.4, 0.8], [0, 48, 24]);
-  const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.9]);
+  // Stage 1 to 2: Separation (0 to 0.35), then Stage 2 to 3: Overlap closer (0.35 to 0.7)
+  const leftX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, -48, -24]);
+  const rightX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, 48, 24]);
+  const scale = useTransform(scrollYProgress, [0, 0.35], [1, 0.9]);
 
-  // Stage 2 to 3: Flip (0.4 to 0.8)
-  const rotateY = useTransform(scrollYProgress, [0.4, 0.8], [0, 180]);
+  // Stage 2 to 3: Flip (0.35 to 0.7)
+  const rotateY = useTransform(scrollYProgress, [0.35, 0.7], [0, 180]);
   // Due to 180deg Y flip, positive Z becomes visual counter-clockwise, negative Z becomes visual clockwise
-  const rotateZLeft = useTransform(scrollYProgress, [0.4, 0.8], [0, 6]);
-  const rotateZRight = useTransform(scrollYProgress, [0.4, 0.8], [0, -6]);
+  const rotateZLeft = useTransform(scrollYProgress, [0.35, 0.7], [0, 6]);
+  const rotateZRight = useTransform(scrollYProgress, [0.35, 0.7], [0, -6]);
 
   // Dynamic borders/radii so it looks like ONE flat image initially
   const borderRadiusLeft = useTransform(
     scrollYProgress,
-    [0, 0.2],
+    [0, 0.18],
     ["16px 0px 0px 16px", "16px 16px 16px 16px"],
   );
   const borderRadiusMiddle = useTransform(
     scrollYProgress,
-    [0, 0.2],
+    [0, 0.18],
     ["0px 0px 0px 0px", "16px 16px 16px 16px"],
   );
   const borderRadiusRight = useTransform(
     scrollYProgress,
-    [0, 0.2],
+    [0, 0.18],
     ["0px 16px 16px 0px", "16px 16px 16px 16px"],
   );
-  const borderOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 0.2]);
-  const shadowOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 0.4]);
+  const borderOpacity = useTransform(scrollYProgress, [0, 0.18], [0, 0.2]);
+  const shadowOpacity = useTransform(scrollYProgress, [0, 0.18], [0, 0.4]);
   const boxShadow = useMotionTemplate`inset 0 1px 1px rgba(255, 255, 255, ${borderOpacity}), inset 0 -24px 48px rgba(0, 0, 0, ${shadowOpacity}), 0 25px 50px -12px rgba(0, 0, 0, ${shadowOpacity})`;
 
   // Cards move up in the last viewport
-  const cardsY = useTransform(scrollYProgress, [0.8, 1], [0, -200]);
+  const cardsY = useTransform(scrollYProgress, [0.7, 0.85], [0, -200]);
 
   // Text appearance at the end in the sticky viewport
-  const textOpacity = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
-  const textY = useTransform(scrollYProgress, [0.8, 1], [40, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0.7, 0.85], [0, 1]);
+  const textY = useTransform(scrollYProgress, [0.7, 0.85], [40, 0]);
 
   // Indicator text appearance at the start
   const startTextOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
@@ -96,7 +96,7 @@ export function ScrollSplitCard({
   return (
     <div
       ref={containerRef}
-      className={cn("relative h-[500vh] w-full", className)}
+      className={cn("relative h-[300vh] w-full", className)}
     >
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden [perspective:1200px]">
         {/* Starting Text indicator */}
