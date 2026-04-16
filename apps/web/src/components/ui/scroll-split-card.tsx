@@ -84,9 +84,6 @@ export function ScrollSplitCard({
             y: startTextY,
           }}
         >
-          <p className="text-sm font-medium tracking-widest text-foreground/50 uppercase">
-            Scroll down
-          </p>
         </motion.div>
 
         <motion.div
@@ -168,9 +165,6 @@ export function ScrollSplitCard({
             y: textY,
           }}
         >
-          <p className="text-3xl font-medium tracking-tight text-foreground/80 font-serif italic">
-            So cool, right?
-          </p>
         </motion.div>
       </div>
     </div>
