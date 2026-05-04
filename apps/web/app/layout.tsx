@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { lexend } from "@/lib/font";
 import "./globals.css";
-import { ThemeProvider } from "next-themes"
+import { ThemeProvider } from "@/components/theme-provider"
 import ReactQueryProvider from "@/lib/react-query-provider";
 
 export const metadata: Metadata = {
