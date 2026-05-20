@@ -1,6 +1,7 @@
 import Navbar from "../src/components/navbar";
 import BentoGrid from "../src/components/bento-grid";
 import CTA from "../src/components/cta";
+import FAQs from "../src/components/faqs";
 import Footer from "../src/components/footer";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <CTA />
         <BentoGrid />
       </div>
+      <FAQs />
       <Footer />
     </>
   );
