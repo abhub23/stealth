@@ -24,7 +24,7 @@ export default function Navbar() {
         className={cn(
           "relative mx-auto flex items-center justify-between transition-all duration-300 ease-in-out pointer-events-auto h-16",
           isScrolled
-            ? "max-w-4xl px-6 md:px-8 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
+            ? "max-w-4xl px-6 md:px-2 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
             : "max-w-6xl px-6 md:px-8 bg-background/80 backdrop-blur-md border border-transparent rounded-md",
         )}
       >
