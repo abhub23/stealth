@@ -8,7 +8,7 @@ import { SplitCard } from "./split-image";
 
 export default function CTA() {
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative pt-32 px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <motion.h2
