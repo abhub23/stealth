@@ -42,12 +42,12 @@ export default function FAQs() {
           type="single"
           collapsible
           defaultValue="shipping"
-          className="max-w-lg mx-auto"
+          className="max-w-3xl mx-auto"
         >
           {items.map((item) => (
             <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger className="text-lg">{item.trigger}</AccordionTrigger>
-              <AccordionContent className="text-base">{item.content}</AccordionContent>
+              <AccordionTrigger className="text-xl">{item.trigger}</AccordionTrigger>
+              <AccordionContent className="text-lg">{item.content}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
