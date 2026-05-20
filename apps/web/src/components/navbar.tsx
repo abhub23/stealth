@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -29,7 +28,7 @@ export default function Navbar() {
             : "max-w-6xl px-6 md:px-8 bg-background/80 backdrop-blur-md border border-transparent rounded-md",
         )}
       >
-        <Link href="/" className="text-xl font-bold text-foreground">
+        <Link href="/" className="text-xl font-bold text-foreground ml-6">
           Stealth
         </Link>
 
@@ -62,20 +61,15 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTA & Mobile Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 mr-6">
           <ThemeToggle />
-          <div className="hidden md:flex items-center gap-3">
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-md border-none"
-              asChild
+          <div className="hidden md:flex items-center gap-8">
+            <Link
+              href="/signin"
+              className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
             >
-              <Link href="/signin">Sign In</Link>
-            </Button>
-            <Button size="lg" className="rounded-md" asChild>
-              <Link href="/signup">Get Started</Link>
-            </Button>
+              Sign In
+            </Link>
           </div>
 
           <button
@@ -128,23 +122,13 @@ export default function Navbar() {
 
           <div className="w-full h-px bg-white/10"></div>
 
-          <div className="flex flex-col gap-3">
-            <Button
-            size='lg'
-              variant="outline"
-              className="rounded-md border-white/20 w-full font-bold text-sm"
-              asChild
-            >
-              <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>
-                Sign In
-              </Link>
-            </Button>
-            <Button size='lg' className="rounded-md w-full font-bold text-sm" asChild>
-              <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>
-                Get Started
-              </Link>
-            </Button>
-          </div>
+          <Link
+            href="/signin"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
+          >
+            Sign In
+          </Link>
         </div>
       )}
     </nav>
