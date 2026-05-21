@@ -38,12 +38,21 @@ export function ScrollSplitCard({
   const [scrollContainer, setScrollContainer] = useState<
     React.RefObject<HTMLElement | null> | undefined
   >();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (externalContainerRef?.current) {
       setScrollContainer(externalContainerRef);
     }
   }, [externalContainerRef]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -52,8 +61,10 @@ export function ScrollSplitCard({
   });
 
   // Stage 1 to 2: Separation (0 to 0.35), then Stage 2 to 3: Overlap closer (0.35 to 0.7)
-  const leftX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, -48, -24]);
-  const rightX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, 48, 24]);
+  const peakGap = isMobile ? 20 : 48;
+  const endGap = isMobile ? 10 : 24;
+  const leftX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, -peakGap, -endGap]);
+  const rightX = useTransform(scrollYProgress, [0, 0.35, 0.7], [0, peakGap, endGap]);
   const scale = useTransform(scrollYProgress, [0, 0.35], [1, 0.9]);
 
   // Stage 2 to 3: Flip (0.35 to 0.7)
@@ -108,16 +119,17 @@ export function ScrollSplitCard({
           }}
         ></motion.div>
 
-        <motion.div
-          style={{
-            scale,
-            y: cardsY,
-            transformStyle: "preserve-3d",
-            width,
-            height,
-          }}
-          className="flex px-4 relative"
-        >
+          <motion.div
+            style={{
+              scale,
+              y: cardsY,
+              transformStyle: "preserve-3d",
+              width: "100%",
+              maxWidth: width,
+              height: isMobile ? "min(500px, 55vw)" : height,
+            }}
+            className="flex px-4 relative"
+          >
           {cards.slice(0, 3).map((card, i) => (
             <motion.div
               key={i}
