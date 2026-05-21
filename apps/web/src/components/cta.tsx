@@ -8,7 +8,7 @@ import { SplitCard } from "./split-image";
 
 export default function CTA() {
   return (
-    <section className="relative pt-32 px-6">
+    <section className="relative pt-32 px-0 md:px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <motion.h2
@@ -20,7 +20,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-foreground"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-foreground px-6 md:px-0"
           >
             Build your Agents,{" "}
             <span className={`relative inline-block ${literata} px-1`}>
@@ -50,7 +50,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="text-lg text-muted-foreground max-w-xl mb-6"
+            className="text-lg text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
           >
             Stop writing boilerplate. Let our agents handle.
           </motion.p>
@@ -64,7 +64,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto px-6 md:px-0"
           >
             <Button
               size="lg"
