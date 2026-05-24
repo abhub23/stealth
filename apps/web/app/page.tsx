@@ -7,13 +7,12 @@ import { Container } from '@/components/container'
 import { Keyboard } from '@/components/keyboard'
 import { LogoCluster } from '@/components/logo-cluster'
 import { Map } from '@/components/map'
-import { Heading, Subheading } from '@/components/text'
+import { Heading } from '@/components/text'
 
 function BentoSection() {
   return (
     <Container className="pb-10">
-      <Subheading>Sales</Subheading>
-      <Heading as="h3" className="mt-2 max-w-3xl">
+      <Heading as="h3" className="mt-2 max-w-3xl !text-foreground">
         Know more about your customers than they do.
       </Heading>
 
