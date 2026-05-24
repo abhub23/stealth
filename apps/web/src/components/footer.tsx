@@ -150,7 +150,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-6 md:mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-6">
           <p className="text-sm text-muted-foreground/80">
             © {new Date().getFullYear()} Stealth Inc. All rights reserved.
           </p>
