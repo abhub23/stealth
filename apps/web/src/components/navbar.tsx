@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Equal, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -24,8 +24,8 @@ export default function Navbar() {
         className={cn(
           "relative mx-auto flex items-center justify-between transition-all duration-300 ease-in-out pointer-events-auto h-16",
           isScrolled
-            ? "max-w-4xl px-6 md:px-2 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
-            : "max-w-6xl px-6 md:px-8 bg-background/80 backdrop-blur-md border border-transparent rounded-md",
+            ? "max-w-4xl md:px-2 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
+            : "max-w-6xl md:px-8 bg-background/80 backdrop-blur-md border border-transparent rounded-md",
         )}
       >
         <Link href="/" className="text-xl font-bold text-foreground ml-6">
@@ -73,11 +73,11 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden relative w-10 h-10 -mr-2 text-foreground focus:outline-none flex items-center justify-center rounded-full hover:bg-white/5 transition-colors"
+            className="md:hidden relative text-foreground focus:outline-none flex items-center justify-center transition-colors rounded-md size-8"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Menu
-              className={`absolute w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
+            <Equal
+              className={`absolute size-7 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
             />
             <X
               className={`absolute w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
