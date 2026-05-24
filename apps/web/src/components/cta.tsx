@@ -2,9 +2,9 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { literata } from "@/lib/font";
-import { SplitCard } from "./split-image";
 
 export default function CTA() {
   return (
@@ -64,7 +64,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto px-6 md:px-0"
+            className="flex flex-col sm:flex-row items-center gap-4 sm:w-auto px-6 md:px-0"
           >
             <Button
               size="lg"
@@ -90,7 +90,13 @@ export default function CTA() {
             </div>
           </div> */}
 
-          <SplitCard />
+          <Image
+            src="/scene.jpg"
+            alt="Hero"
+            width={1000}
+            height={500}
+            className="w-full max-w-[1000px] h-auto my-16 rounded-xl px-6 md:px-0"
+          />
         </div>
       </div>
     </section>
