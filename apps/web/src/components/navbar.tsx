@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Equal, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,12 +65,9 @@ export default function Navbar() {
         <div className="flex items-center gap-3 mr-6">
           <ThemeToggle />
           <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/signin"
-              className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
-            >
-              Sign In
-            </Link>
+            <Button asChild size="lg" className="rounded-md h-9 px-4 text-sm">
+              <Link href="/signin">Sign In</Link>
+            </Button>
           </div>
 
           <button
@@ -88,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-background border border-muted-foreground/20 rounded-2xl shadow-2xl px-6 py-6 flex flex-col gap-6 overflow-hidden">
+        <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-background border border-muted-foreground/20 rounded-2xl shadow-2xl px-6 py-6 flex flex-col gap-4 overflow-hidden">
           <div className="flex flex-col gap-5">
             <Link
               href="#"
@@ -122,13 +120,14 @@ export default function Navbar() {
 
           <div className="w-full h-px bg-white/10"></div>
 
-          <Link
-            href="/signin"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
-          >
-            Sign In
-          </Link>
+          <Button asChild className="w-full rounded-md text-base h-auto py-1.5">
+            <Link
+              href="/signin"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sign In
+            </Link>
+          </Button>
         </div>
       )}
     </nav>
