@@ -20,7 +20,7 @@ export default function CTA() {
               stiffness: 150,
               damping: 10,
             }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-foreground px-6 md:px-0"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-6 md:px-0"
           >
             Build your Agents,{" "}
             <span className={`relative inline-block ${literata} px-1`}>
@@ -90,13 +90,15 @@ export default function CTA() {
             </div>
           </div> */}
 
-          <Image
-            src="/scene.jpg"
-            alt="Hero"
-            width={1000}
-            height={500}
-            className="w-full max-w-[1000px] h-auto my-16 rounded-xl px-6 md:px-0"
-          />
+          <div className="w-full max-w-[1000px] my-16 lg:mt-32 rounded-xl overflow-hidden px-6 md:px-0">
+            <Image
+              src="/scene.jpg"
+              alt="Hero"
+              width={1000}
+              height={500}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>
