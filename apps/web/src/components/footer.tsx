@@ -73,7 +73,7 @@ export default function Footer() {
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Product
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-2">
                 <li>
                   <Link href="#" className={linkStyles}>
                     Features
@@ -99,32 +99,9 @@ export default function Footer() {
 
             <div>
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
-                Resources
-              </h3>
-              <ul className="space-y-4">
-                <li>
-                  <Link href="#" className={linkStyles}>
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={linkStyles}>
-                    API Reference
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={linkStyles}>
-                    Community Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Company
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-2">
                 <li>
                   <Link href="#" className={linkStyles}>
                     About Us
