@@ -12,9 +12,9 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-0 lg:flex lg:justify-between lg:items-start">
           {/* Brand Column & CTA */}
-          <div className="md:col-span-12 lg:col-span-5 text-left flex flex-col items-start">
+          <div className="md:col-span-12 text-left flex flex-col items-start">
             <Link
               href="/"
               className="inline-flex items-center gap-3 mb-8 group"
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div className="md:col-span-12 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10">
+          <div className="md:col-span-12 grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-16">
             <div>
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Product
@@ -117,7 +117,7 @@ export default function Footer() {
                     href="#"
                     className={`${linkStyles} !inline-flex items-center gap-1.5 group`}
                   >
-                    Partners{" "}
+                    GitHub{" "}
                     <ArrowUpRight className="h-3 w-3 opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
                   </Link>
                 </li>
