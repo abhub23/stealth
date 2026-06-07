@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Links Columns */}
           <div className="md:col-span-12 grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-16 lg:grid-cols-2 lg:ml-auto">
-            <div>
+            <div className="lg:-ml-12">
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Product
               </h3>
@@ -89,15 +89,10 @@ export default function Footer() {
                     Integrations
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className={linkStyles}>
-                    Changelog
-                  </Link>
-                </li>
               </ul>
             </div>
 
-            <div>
+            <div className="lg:ml-auto">
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Company
               </h3>
