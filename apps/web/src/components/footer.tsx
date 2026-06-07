@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-0 lg:flex lg:justify-between lg:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-0 lg:flex lg:items-start">
           {/* Brand Column & CTA */}
           <div className="md:col-span-12 text-left flex flex-col items-start">
             <Link
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div className="md:col-span-12 grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-16">
+          <div className="md:col-span-12 grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-16 lg:grid-cols-2 lg:ml-auto">
             <div>
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
                 Product
