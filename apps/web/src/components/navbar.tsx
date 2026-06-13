@@ -25,8 +25,8 @@ export default function Navbar() {
         className={cn(
           "relative mx-auto flex items-center justify-between transition-all duration-300 ease-in-out pointer-events-auto h-16",
           isScrolled
-            ? "max-w-4xl md:px-2 bg-background/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
-            : "max-w-6xl md:px-8 bg-background/80 backdrop-blur-md border border-transparent rounded-md",
+            ? "max-w-4xl md:px-2 bg-background/60 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
+            : "max-w-6xl md:px-8 bg-background/60 backdrop-blur-md border border-transparent rounded-md",
         )}
       >
         <Link href="/" className="text-xl font-bold text-foreground ml-6">
@@ -57,7 +57,7 @@ export default function Navbar() {
             href="#"
             className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
-            Customers
+            Policy
           </Link>
         </div>
 
@@ -114,7 +114,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
             >
-              Customers
+              Policy
             </Link>
           </div>
 
