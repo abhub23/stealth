@@ -45,8 +45,8 @@ export default function FAQs() {
         >
           {items.map((item) => (
             <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger className="text-lg">{item.trigger}</AccordionTrigger>
-              <AccordionContent className="text-lg">{item.content}</AccordionContent>
+              <AccordionTrigger>{item.trigger}</AccordionTrigger>
+              <AccordionContent>{item.content}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
