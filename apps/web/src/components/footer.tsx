@@ -37,7 +37,9 @@ export default function Footer() {
 
             <div className="flex items-center gap-5">
               <Link
-                href="#"
+                href="https://x.com/abdullah_twt23"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                 aria-label="X (formerly Twitter)"
               >
