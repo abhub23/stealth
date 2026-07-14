@@ -11,35 +11,36 @@ export default function CTA() {
     <section className="relative pt-32 px-0 md:px-6">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
-          <motion.h2
-            initial={{ y: 25, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              delay: 0.1,
-              type: "spring",
-              stiffness: 150,
-              damping: 10,
-            }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-6 md:px-0"
-          >
-            Build your Agents,{" "}
-            <span className={`relative inline-block ${literata} px-1`}>
-              Confidently
-              <svg
-                className="absolute w-[102%] h-[0.4em] -bottom-[0.1em] -left-[1%] text-primary/80 z-[-1] drop-shadow-sm"
-                viewBox="0 0 100 20"
-                preserveAspectRatio="none"
+          <h2 className="w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-3 sm:px-6 md:px-0 space-y-2">
+            <span className="block overflow-hidden">
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{
+                  delay: 0,
+                  ease: "easeInOut",
+                  duration: 0.6,
+                }}
+                className="block whitespace-nowrap"
               >
-                <path
-                  d="M 2 14 C 15 16, 30 12, 50 13 C 70 14, 85 11, 98 15"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+                Agents that <span className="text-orange-800">outperform</span>
+              </motion.span>
             </span>
-          </motion.h2>
+            <span className="block overflow-hidden">
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{
+                  delay: 0.10,
+                  ease: "easeInOut",
+                  duration: 0.6,
+                }}
+                className="block whitespace-nowrap"
+              >
+                your entire roadmap.
+              </motion.span>
+            </span>
+          </h2>
 
           <motion.p
             initial={{ y: 20, opacity: 0 }}
