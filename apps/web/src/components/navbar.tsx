@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Equal, X } from "lucide-react";
+import { Equal, X, TextAlignStart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -74,11 +74,11 @@ export default function Navbar() {
             className="md:hidden relative text-foreground focus:outline-none flex items-center justify-center transition-colors rounded-md size-8"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Equal
-              className={`absolute size-7 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
+            <TextAlignStart
+              className={`absolute size-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
             />
             <X
-              className={`absolute w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
+              className={`absolute size-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
             />
           </button>
         </div>
