@@ -43,12 +43,12 @@ export default function CTA() {
           </h2>
 
           <motion.p
-            initial={{ y: 20, opacity: 0, filter: "blur(2px)" }}
+            initial={{ y: 20, opacity: 0, filter: "blur(4px)" }}
             animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
             transition={{
               delay: 0.6,
               ease: "easeInOut",
-              duration: 0.6,
+              duration: 0.8,
             }}
             className="lg:text-xl text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
           >
@@ -56,12 +56,12 @@ export default function CTA() {
           </motion.p>
 
           <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0, filter: "blur(4px)" }}
+            animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
             transition={{
               delay: 0.7,
               ease: "easeInOut",
-              duration: 0.6,
+              duration: 0.8,
             }}
             className="flex flex-row items-center gap-4 lg:gap-8 sm:w-auto px-6 md:px-0"
           >
