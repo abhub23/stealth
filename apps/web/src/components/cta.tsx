@@ -50,7 +50,7 @@ export default function CTA() {
               ease: "easeInOut",
               duration: 0.6,
             }}
-            className="text-lg text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
+            className="lg:text-xl text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
           >
             Skip the setup. Skip the boilerplate.<br />Let the agents do the heavy lifting.
           </motion.p>
@@ -59,35 +59,27 @@ export default function CTA() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.8,
+              delay: 0.7,
               ease: "easeInOut",
               duration: 0.6,
             }}
-            className="flex flex-col sm:flex-row items-center gap-4 sm:w-auto px-6 md:px-0"
+            className="flex flex-row items-center gap-4 lg:gap-8 sm:w-auto px-6 md:px-0"
           >
             <Button
               size="lg"
-              className="rounded-md h-12 px-6 text-base group cursor-pointer"
+              className="rounded-md h-10 sm:h-12 px-3 sm:px-6 text-[15px] sm:text-base group cursor-pointer"
             >
-              Get Started
-              <ArrowRight className="size-5 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
+              Start building
+              <ArrowRight className="size-4 sm:size-5 transition-transform duration-500 ease-out group-hover:translate-x-1.5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-md h-10 sm:h-12 px-3 sm:px-6 text-[15px] sm:text-base cursor-pointer"
+            >
+              Read the Docs
             </Button>
           </motion.div>
-
-          {/* <div className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-              No credit card required
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-              14-day free trial
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-              Cancel anytime
-            </div>
-          </div> */}
 
           <div className="w-full max-w-[1000px] my-16 lg:mt-32 rounded-xl overflow-hidden px-6 md:px-0">
             <Image
