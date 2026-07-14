@@ -14,10 +14,10 @@ export default function CTA() {
           <h2 className="w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-3 sm:px-6 md:px-0 space-y-2">
             <span className="block overflow-hidden">
               <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
+                initial={{ y: "100%", filter: "blur(2px)" }}
+                animate={{ y: 0, filter: "blur(0px)" }}
                 transition={{
-                  delay: 0,
+                  delay: 0.1,
                   ease: "easeInOut",
                   duration: 0.6,
                 }}
@@ -28,10 +28,10 @@ export default function CTA() {
             </span>
             <span className="block overflow-hidden">
               <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
+                initial={{ y: "100%", filter: "blur(2px)" }}
+                animate={{ y: 0, filter: "blur(0px)" }}
                 transition={{
-                  delay: 0.10,
+                  delay: 0.25,
                   ease: "easeInOut",
                   duration: 0.6,
                 }}
@@ -43,27 +43,25 @@ export default function CTA() {
           </h2>
 
           <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 20, opacity: 0, filter: "blur(2px)" }}
+            animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
             transition={{
-              delay: 0.2,
-              type: "spring",
-              stiffness: 150,
-              damping: 10,
+              delay: 0.6,
+              ease: "easeInOut",
+              duration: 0.6,
             }}
             className="text-lg text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
           >
-            Stop writing boilerplate. Let our agents handle.
+            Skip the setup. Skip the boilerplate.<br />Let the agents do the heavy lifting.
           </motion.p>
 
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.3,
-              type: "spring",
-              stiffness: 150,
-              damping: 10,
+              delay: 0.8,
+              ease: "easeInOut",
+              duration: 0.6,
             }}
             className="flex flex-col sm:flex-row items-center gap-4 sm:w-auto px-6 md:px-0"
           >
