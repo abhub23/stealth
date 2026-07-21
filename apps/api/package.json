@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run index.ts",
-    "start": "bun run index.ts",
+    "dev": "bun --watch run server.ts",
+    "start": "bun run server.ts",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
