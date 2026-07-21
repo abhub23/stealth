@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Roboto_Mono } from "next/font/google";
 import { lexend } from "@/lib/font";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import ReactQueryProvider from "@/lib/react-query-provider";
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-roboto-mono",
+});
 
 export const metadata: Metadata = {
   title: "Stealth",
@@ -15,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${robotoMono.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
