@@ -4,11 +4,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { literata } from "@/lib/font";
+import HeroFlame from "@/components/effects/flame/hero-flame";
 
 export default function CTA() {
   return (
-    <section className="relative pt-32 px-0 md:px-6">
+    <section className="relative pt-32 px-0 md:px-6 overflow-x-clip">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <h2 className="w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-3 sm:px-6 md:px-0 space-y-2">
@@ -63,7 +63,7 @@ export default function CTA() {
               ease: "easeInOut",
               duration: 0.8,
             }}
-            className="flex flex-row items-center gap-4 lg:gap-8 sm:w-auto px-6 md:px-0"
+            className="flex flex-row items-center gap-4 lg:gap-8 sm:w-auto px-6 md:px-0 relative z-10"
           >
             <Button
               size="lg"
@@ -81,7 +81,11 @@ export default function CTA() {
             </Button>
           </motion.div>
 
-          <div className="w-full max-w-[1000px] my-16 lg:mt-32 rounded-xl overflow-hidden px-6 md:px-0">
+          <div className="-mt-[100px] mb-0">
+            <HeroFlame />
+          </div>
+
+          <div className="w-full max-w-[1000px] my-16 rounded-xl overflow-hidden px-6 md:px-0">
             <Image
               src="/scene.jpg"
               alt="Hero"
