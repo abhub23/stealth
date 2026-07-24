@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -31,7 +32,7 @@ export default function FAQs() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground">
             Frequently Asked Questions
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -43,10 +44,17 @@ export default function FAQs() {
           collapsible
           className="max-w-2xl mx-auto"
         >
-          {items.map((item) => (
-            <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger>{item.trigger}</AccordionTrigger>
-              <AccordionContent>{item.content}</AccordionContent>
+          {items.map((item, index) => (
+            <AccordionItem
+              key={item.value}
+              value={item.value}
+              className={cn(
+                "border-0 bg-transparent rounded-none",
+                index !== items.length - 1 && "border-b"
+              )}
+            >
+              <AccordionTrigger className="text-lg">{item.trigger}</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">{item.content}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
