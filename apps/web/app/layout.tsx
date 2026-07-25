@@ -11,8 +11,10 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 });
 
+const App_Url = "https://stealth.abdullahtech.dev"
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stealth.abdullahtech.dev"),
+  metadataBase: new URL(App_Url),
   title: "Stealth",
   icons: {
     icon: "/og-image.png",
@@ -53,11 +55,11 @@ export const metadata: Metadata = {
     title: "Stealth",
     description:
       "Stealth is a battle tested AI assistant designed and developed to help devs manage and review their PRs efficiently",
-    siteName: "Stealth",
+    siteName: App_Url,
 
     images: [
       {
-        url: "/og-image.png",
+        url: `${App_Url}/og-image.png`,
         width: 1200,
         height: 630,
       },
@@ -66,18 +68,19 @@ export const metadata: Metadata = {
   },
 
   twitter: {
+    site: App_Url,
     creator: "@abdullah_twt23",
     title: "Stealth",
     description:
       "Stealth is a battle tested AI assistant designed and developed to help devs manage and review their PRs efficiently",
     images: {
-      url: "/og-image.png",
+      url: `${App_Url}/og-image.png`,
     },
   },
 
   appLinks: {
     web: {
-      url: new URL("https://stealth.abdullahtech.dev"),
+      url: new URL(App_Url),
     },
   },
   category: "AI Product",
