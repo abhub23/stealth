@@ -67,7 +67,7 @@ export function Page({
                   type="email"
                   placeholder="xyz@gmail.com"
                   required
-                  className="!bg-transparent h-10 text-base rounded-none border border-white/20"
+                  className="!bg-transparent h-10 text-base rounded-md border border-border focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 
@@ -86,14 +86,14 @@ export function Page({
                   name="password"
                   type="password"
                   required
-                  className="!bg-transparent h-10 text-base rounded-none border border-white/20"
+                  className="!bg-transparent h-10 text-base rounded-md border border-border focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 
               <Field>
                 <Button
                   type="submit"
-                  className="w-full cursor-pointer bg-white text-black hover:bg-white/90 h-10 text-base"
+                  className="w-full cursor-pointer text-primary-foreground h-12 text-base rounded-full"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -122,7 +122,7 @@ export function Page({
                 <Button
                   type="button"
                   onClick={handleGoogleLogin}
-                  className="w-full cursor-pointer flex items-center justify-center gap-2 bg-white text-black hover:bg-white/90 h-10 text-base"
+                  className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
                 >
                   <img src="/icons/google.svg" alt="Google" className="size-5" />
                   Continue with Google
