@@ -13,6 +13,9 @@ import {
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { authClient, googleSignIn } from "@/lib/auth-client";
+import { toast } from "sonner";
 
 interface PageProps extends React.ComponentProps<"form"> {
   searchParams?: Record<string, string>;
@@ -23,20 +26,34 @@ export function Page({
   searchParams: _searchParams,
   ...props
 }: PageProps) {
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-
-  const handleGoogleLogin = async () => {};
+  const [error, setError] = React.useState<string | null>(null);
 
   const handleEmailPasswordLogin = async (
     e: React.FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     try {
       const form = new FormData(e.currentTarget);
       const email = String(form.get("email") || "").trim();
       const password = String(form.get("password") || "");
+
+      const { error } = await authClient.signIn.email({
+        email,
+        password,
+      });
+
+      if (error) {
+        setError(error.message || "Invalid email or password");
+        return;
+      }
+
+      toast.success("Signed in successfully");
+      router.push("/");
     } finally {
       setIsSubmitting(false);
     }
@@ -90,6 +107,10 @@ export function Page({
                 />
               </Field>
 
+              {error && (
+                <p className="text-sm text-destructive text-center">{error}</p>
+              )}
+
               <Field>
                 <Button
                   type="submit"
@@ -121,7 +142,7 @@ export function Page({
               <Field>
                 <Button
                   type="button"
-                  onClick={handleGoogleLogin}
+                  onClick={googleSignIn}
                   className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
                 >
                   <img src="/icons/google.svg" alt="Google" className="size-5" />
@@ -149,7 +170,7 @@ export function Page({
           href="#"
           className="underline underline-offset-4 hover:text-foreground transition-colors"
         >
-          Terms of Service
+          Terms
         </Link>{" "}
         &amp;{" "}
         <Link
