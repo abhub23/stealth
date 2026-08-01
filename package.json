@@ -4,6 +4,12 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "db": "docker compose -f docker/docker-compose.yml up -d",
+    "db:stop": "docker compose -f docker/docker-compose.yml down",
+    "db:generate": "bun run --filter=@db db:generate",
+    "db:migrate": "bun run --filter=@db db:migrate",
+    "db:push": "bun run --filter=@db db:push",
+    "db:studio": "bun run --filter=@db db:studio",
     "lint": "turbo run lint",
     "fmt": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
