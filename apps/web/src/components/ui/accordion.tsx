@@ -4,7 +4,7 @@ import * as React from "react"
 import { Accordion as AccordionPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
-import { CaretDownIcon } from "@phosphor-icons/react"
+import { ChevronDown } from "lucide-react"
 
 function Accordion({
   className,
@@ -48,7 +48,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <CaretDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 transition-transform duration-300 group-aria-expanded/accordion-trigger:rotate-180" />
+        <ChevronDown data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 transition-transform duration-300 group-aria-expanded/accordion-trigger:rotate-180" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
