@@ -6,7 +6,7 @@ import config from "./config/config";
 export const auth = betterAuth({
   secret: config.betterAuth.secret,
   baseURL: config.betterAuth.url,
-  trustedOrigins: ["http://localhost:3000"],
+  trustedOrigins: [config.app.webUrl],
 
   advanced:{
       useSecureCookies: false,
