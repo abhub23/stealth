@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
@@ -11,15 +10,7 @@ import { useRouter } from "next/navigation";
 import { authClient, googleSignIn } from "@/lib/auth-client";
 import { toast } from "sonner";
 
-interface PageProps extends React.ComponentProps<"form"> {
-  searchParams?: Record<string, string>;
-}
-
-export function Page({
-  className,
-  searchParams: _searchParams,
-  ...props
-}: PageProps) {
+export default function Page() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -68,8 +59,7 @@ export function Page({
           </div>
 
           <form
-            className={cn("flex flex-col gap-4", className)}
-            {...props}
+            className="flex flex-col gap-4"
             onSubmit={handleEmailPasswordSignup}
           >
             <FieldGroup className="rounded-lg p-6">
@@ -198,5 +188,3 @@ export function Page({
     </div>
   );
 }
-
-export default Page;
