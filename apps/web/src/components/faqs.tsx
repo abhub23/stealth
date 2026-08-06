@@ -8,22 +8,34 @@ import {
 
 const items = [
   {
-    value: "shipping",
-    trigger: "What are your shipping options?",
+    value: "ai",
+    trigger: "What can the AI agents automate?",
     content:
-      "We offer standard (5-7 days), express (2-3 days), and overnight shipping. Free shipping on international orders.",
+      "Our agents handle roadmap planning, task prioritization, and cross-team coordination — so you can focus on building instead of managing.",
+  },
+  {
+    value: "customize",
+    trigger: "Can I customize agent behavior?",
+    content:
+      "Yes, each agent can be configured with custom instructions, tools, and workflows tailored to your needs.",
   },
   {
     value: "returns",
-    trigger: "What is your return policy?",
+    trigger: "How do agents collaborate across teams?",
     content:
-      "Returns accepted within 30 days. Items must be unused and in original packaging. Refunds processed within 5-7 business days.",
+      "Agents share context, delegate tasks, and coordinate workflows across your entire team in real time.",
   },
   {
     value: "support",
     trigger: "How can I contact customer support?",
     content:
-      "Reach us via email, live chat, or phone. We respond within 24 hours during business days.",
+      "Reach us via email or live chat. We respond within 24 hours during business days.",
+  },
+  {
+    value: "pricing",
+    trigger: "How much does it cost?",
+    content:
+      "We offer a free tier to get started, with paid plans for teams and enterprise needs.",
   },
 ]
 
@@ -32,8 +44,8 @@ export default function FAQs() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-foreground">
-            Frequently Asked Questions
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
+            FAQs
           </h2>
           <p className="mt-3 text-muted-foreground">
             Everything you need to know about our platform.
