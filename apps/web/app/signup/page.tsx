@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { authClient, googleSignIn } from "@/lib/auth-client";
+import { emailSignUp, googleSignIn } from "@/lib/auth-client";
 import { toast } from "sonner";
 
 export default function Page() {
@@ -29,11 +29,8 @@ export default function Page() {
       const email = String(form.get("email") || "").trim();
       const password = String(form.get("password") || "");
 
-      const { error } = await authClient.signUp.email({
-        email,
-        password,
-        name: `${firstName} ${lastName}`.trim(),
-      });
+      const name = `${firstName} ${lastName}`.trim();
+      const { error } = await emailSignUp(name, email, password);
 
       if (error) {
         setError(error.message || "Failed to create account");

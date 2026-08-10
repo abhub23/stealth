@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { authClient, googleSignIn } from "@/lib/auth-client";
+import { emailSignIn, googleSignIn } from "@/lib/auth-client";
 import { toast } from "sonner";
 
 export default function Page() {
@@ -31,10 +31,7 @@ export default function Page() {
       const email = String(form.get("email") || "").trim();
       const password = String(form.get("password") || "");
 
-      const { error } = await authClient.signIn.email({
-        email,
-        password,
-      });
+      const { error } = await emailSignIn(email, password);
 
       if (error) {
         setError(error.message || "Invalid email or password");
