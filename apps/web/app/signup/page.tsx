@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { emailSignUp, googleSignIn } from "@/lib/auth-client";
+import { emailSignUp, googleSignIn } from "@/lib/client-auth";
 import { toast } from "sonner";
 
 export default function Page() {
