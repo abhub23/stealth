@@ -2,30 +2,6 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Container } from "@/components/container";
 import { Heading, Subheading } from "@/components/text";
-import { Sparkles, Shield, Terminal, Zap } from "lucide-react";
-
-const values = [
-  {
-    title: "Innovation First",
-    description: "We push the boundaries of what's possible with AI, constantly evolving our platform to stay ahead of the curve.",
-    icon: Sparkles,
-  },
-  {
-    title: "Privacy by Design",
-    description: "Your data is yours. We build security and privacy into every layer of our architecture.",
-    icon: Shield,
-  },
-  {
-    title: "Developer Obsessed",
-    description: "Every feature we ship is crafted with developers in mind — clean APIs, seamless DX, and zero friction.",
-    icon: Terminal,
-  },
-  {
-    title: "Radical Transparency",
-    description: "No hidden pricing, no black-box algorithms. We believe in honest, open communication with our users.",
-    icon: Zap,
-  },
-];
 
 export default function About() {
   return (
@@ -82,33 +58,61 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="py-32">
-          <Container>
-            <div className="max-w-3xl mx-auto text-center mb-20">
-              <Subheading className="mb-4 text-primary">Our Values</Subheading>
-              <Heading as="h2" className="text-3xl md:text-5xl">What drives us every day</Heading>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              {values.map((value) => {
-                const Icon = value.icon;
-                return (
-                  <div
-                    key={value.title}
-                    className="group relative overflow-hidden border border-white/10 rounded-2xl p-8 bg-background hover:bg-white/[0.02] transition-all duration-300"
-                  >
-                    {/* Subtle hover gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    <div className="relative z-10">
-                      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">{value.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
+        <section className="py-32 relative">
+          <Container className="relative z-10">
+            <div className="grid gap-16 lg:grid-cols-12">
+              <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+                <Subheading className="mb-4 text-primary">Our Values</Subheading>
+                <Heading as="h2" className="text-3xl md:text-5xl">
+                  The principles that guide everything we do
+                </Heading>
+                <p className="mt-6 max-w-md text-lg text-muted-foreground">
+                  Building something worthwhile starts with a clear set of
+                  beliefs. Here's what we're stubborn about.
+                </p>
+              </div>
+
+              <div className="lg:col-span-7">
+                <ul className="divide-y divide-border border-y border-border">
+                  {[
+                    {
+                      title: "Craft over quick wins",
+                      description:
+                        "We sweat the details — clean APIs, thoughtful design, and zero shortcuts.",
+                    },
+                    {
+                      title: "Trust through transparency",
+                      description:
+                        "Your data stays yours. We are open about how we work, what we store, and why.",
+                    },
+                    {
+                      title: "Build for builders",
+                      description:
+                        "We make tools we want to use ourselves. If it's not delightful for a developer, it doesn't ship.",
+                    },
+                    {
+                      title: "Own it end to end",
+                      description:
+                        "From idea to production, we take full responsibility for every line we ship.",
+                    },
+                  ].map((value, index) => (
+                    <li
+                      key={value.title}
+                      className="group grid gap-3 py-8 transition-colors sm:grid-cols-[64px_1fr_2fr] sm:items-baseline sm:gap-6"
+                    >
+                      <span className="font-mono text-sm text-muted-foreground/50 tabular-nums transition-colors group-hover:text-primary">
+                        /0{index + 1}
+                      </span>
+                      <h3 className="text-xl font-semibold tracking-tight text-foreground transition-transform duration-300 group-hover:translate-x-1 sm:text-2xl">
+                        {value.title}
+                      </h3>
+                      <p className="text-base leading-relaxed text-muted-foreground">
+                        {value.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Container>
         </section>
