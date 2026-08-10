@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { type FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Field,
@@ -16,11 +16,11 @@ import { toast } from "sonner";
 
 export default function Page() {
   const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleEmailPasswordLogin = async (
-    e: React.FormEvent<HTMLFormElement>,
+    e: FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
     setIsSubmitting(true);
