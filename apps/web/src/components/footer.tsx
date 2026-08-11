@@ -7,7 +7,7 @@ export default function Footer() {
     "text-sm text-muted-foreground hover:text-foreground transition-all duration-300 bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-no-repeat bg-left-bottom pb-1 hover:bg-[length:100%_1px]";
 
   return (
-    <footer className="relative border-t border-white/5 bg-background pt-20 pb-12 overflow-hidden selection:bg-primary/30">
+    <footer className="relative border-t border-white/5 bg-background pt-20 overflow-hidden selection:bg-primary/30">
       {/* Subtle top glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
 
@@ -100,7 +100,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className={linkStyles}>
+                  <Link href="/about" className={linkStyles}>
                     About Us
                   </Link>
                 </li>
@@ -124,19 +124,29 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-6 md:mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-6">
+        <div className="mt-6 md:mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-6">
           <p className="text-sm text-muted-foreground/80">
             © {new Date().getFullYear()} Stealth Inc. All rights reserved.
           </p>
           <div className="flex gap-8">
-            <Link href="#" className={linkStyles}>
+            <Link href="/privacy" className={linkStyles}>
               Privacy Policy
             </Link>
-            <Link href="#" className={linkStyles}>
+            <Link href="/terms" className={linkStyles}>
               Terms of Service
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Giant fading wordmark */}
+      <div
+        aria-hidden="true"
+        className="relative pointer-events-none select-none mt-4"
+      >
+        <span className="block text-center text-[clamp(100px,22vw,360px)] font-bold leading-[0.85] tracking-tight text-muted-foreground/35 [mask-image:linear-gradient(to_top,black_40%,transparent_100%)]">
+          Stealth
+        </span>
       </div>
     </footer>
   );
