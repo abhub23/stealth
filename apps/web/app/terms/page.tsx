@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import { Container } from "@/components/container";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Stealth",
+  title: "Terms and Conditions - Stealth",
   description:
     "The terms and conditions that govern your use of Stealth's AI-powered development platform.",
 };
@@ -13,7 +13,7 @@ const sections = [
   {
     title: "1. Acceptance of Terms",
     body: [
-      "By accessing or using the Stealth platform, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, you may not access the platform.",
+      "By accessing or using the Stealth platform, you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any part of these terms, you may not access the platform.",
       "These Terms apply to all visitors, users, and others who access the service. We may update these Terms from time to time, and it is your responsibility to review them periodically.",
     ],
   },
@@ -92,7 +92,7 @@ export default function TermsPage() {
           <Container className="relative z-10">
             <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
               <h1 className="mb-6 text-5xl md:text-6xl font-bold tracking-tight text-balance">
-                Terms of Service
+                Terms and Conditions
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-balance">
                 Last updated: August 11, 2026
