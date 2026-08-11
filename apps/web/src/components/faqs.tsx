@@ -44,7 +44,7 @@ export default function FAQs() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
             FAQs
           </h2>
           <p className="mt-3 text-muted-foreground">
@@ -65,8 +65,8 @@ export default function FAQs() {
                 index !== items.length - 1 && "border-b"
               )}
             >
-              <AccordionTrigger className="text-lg">{item.trigger}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{item.content}</AccordionContent>
+              <AccordionTrigger className="text-base sm:text-lg">{item.trigger}</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-sm sm:text-base">{item.content}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
