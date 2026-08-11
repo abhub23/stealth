@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { XIcon, GithubIcon, LinkedInIcon, MailIcon } from "./logos";
 
 export default function Footer() {
@@ -86,17 +85,12 @@ export default function Footer() {
                     Pricing
                   </Link>
                 </li>
-                <li>
-                  <Link href="#" className={linkStyles}>
-                    Integrations
-                  </Link>
-                </li>
               </ul>
             </div>
 
             <div className="lg:ml-auto">
               <h3 className="font-semibold text-foreground mb-6 text-sm tracking-wider uppercase text-opacity-90">
-                Company
+                Resources
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -117,15 +111,6 @@ export default function Footer() {
                 <li>
                   <Link href="/terms" className={linkStyles}>
                     Terms and Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className={`${linkStyles} !inline-flex items-center gap-1.5 group`}
-                  >
-                    GitHub{" "}
-                    <ArrowUpRight className="h-3 w-3 opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
                   </Link>
                 </li>
               </ul>
