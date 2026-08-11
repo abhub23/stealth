@@ -12,7 +12,7 @@ export default function CTA() {
     <section className="relative pt-32 px-0 md:px-6 overflow-x-clip">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
-          <h2 className="w-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-16 mb-4 leading-tight text-foreground px-3 sm:px-6 md:px-0 space-y-2">
+          <h2 className="w-full text-[32px] sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mt-16 mb-4 leading-tight text-foreground px-3 sm:px-6 md:px-0 space-y-2">
             <span className="block overflow-hidden">
               <motion.span
                 initial={{ y: "100%", filter: "blur(2px)" }}
@@ -85,7 +85,7 @@ export default function CTA() {
             </Button>
           </motion.div>
 
-          <div className="-mt-[100px] mb-0">
+          <div className="-mt-[100px] mb-10 lg:mb-24">
             <HeroFlame />
           </div>
 
