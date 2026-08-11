@@ -54,7 +54,7 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="#"
+            href="/privacy"
             className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             Policy
@@ -110,7 +110,7 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              href="#"
+              href="/privacy"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
             >

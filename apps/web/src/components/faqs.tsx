@@ -48,7 +48,7 @@ export default function FAQs() {
             FAQs
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Everything you need to know about our platform.
+            Everything you need to know about us.
           </p>
         </div>
         <Accordion
