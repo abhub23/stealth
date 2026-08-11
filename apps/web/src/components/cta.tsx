@@ -89,7 +89,7 @@ export default function CTA() {
             <HeroFlame />
           </div>
 
-          <div className="w-full max-w-[1000px] my-16 rounded-xl overflow-hidden px-6 md:px-0">
+          {/* <div className="w-full max-w-[1000px] my-16 rounded-xl overflow-hidden px-6 md:px-0">
             <Image
               src="/scene.jpg"
               alt="Hero"
@@ -97,7 +97,7 @@ export default function CTA() {
               height={500}
               className="w-full h-auto"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
