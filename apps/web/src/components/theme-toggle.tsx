@@ -19,7 +19,7 @@ export function ThemeToggle() {
       <Button
         variant="ghost"
         size="icon"
-        className="rounded-full w-9 h-9 bg-transparent hover:bg-black/5 dark:hover:bg-white/5"
+        className="rounded-full size-9 bg-transparent hover:bg-black/5 dark:hover:bg-white/5"
       >
         <div className="size-4" />
         <span className="sr-only">Toggle theme</span>
@@ -32,7 +32,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="rounded-full w-9 h-9 bg-transparent hover:bg-black/5 dark:hover:bg-white/5"
+      className="rounded-full size-9 bg-transparent hover:bg-black/5 dark:hover:bg-white/5"
     >
       {theme === "dark" ?
       <Sun className="size-4"/> :

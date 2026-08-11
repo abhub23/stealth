@@ -75,10 +75,10 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <TextAlignStart
-              className={`absolute size-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
+              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
             />
             <X
-              className={`absolute size-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
+              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
             />
           </button>
         </div>

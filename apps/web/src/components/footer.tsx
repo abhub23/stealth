@@ -110,6 +110,16 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/privacy" className={linkStyles}>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className={linkStyles}>
+                    Terms and Conditions
+                  </Link>
+                </li>
+                <li>
                   <Link
                     href="#"
                     className={`${linkStyles} !inline-flex items-center gap-1.5 group`}
@@ -124,18 +134,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-6 md:mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-6">
+        <div className="mt-6 md:mt-16 pt-4 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-6">
           <p className="text-sm text-muted-foreground/80">
             © {new Date().getFullYear()} Stealth Inc. All rights reserved.
           </p>
-          <div className="flex gap-8">
-            <Link href="/privacy" className={linkStyles}>
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className={linkStyles}>
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
 
