@@ -42,7 +42,7 @@ export default function About() {
               </div>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Stealth started in 2024 with a simple observation: developers spend too much
+                  Stealth started in 2026 with a simple observation: developers spend too much
                   time on repetitive tasks and not enough time building. We set out to create
                   AI agents that could handle the grunt work — testing, deployment, monitoring —
                   so teams could move faster and ship better software.
@@ -118,7 +118,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section >
+        <section className="pb-20">
           <Container>
             <div className="relative max-w-4xl mx-auto overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-12 md:p-20 text-center">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent blur-2xl" />
