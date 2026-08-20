@@ -7,7 +7,7 @@ const pool = new Pool({
 });
 
 try {
-  await pool.query( "SELECT 1");
+  await pool.query("SELECT 1");
 
   console.log("✅ Database connected successfully!");
 } catch (err) {

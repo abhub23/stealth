@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import { lexend } from "@/lib/font";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import ReactQueryProvider from "@/lib/react-query-provider";
 
 const robotoMono = Roboto_Mono({
@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 });
 
-const App_Url = "https://stealth.abdullahtech.dev"
+const App_Url = "https://stealth.abdullahtech.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(App_Url),
@@ -92,7 +92,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${robotoMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${robotoMono.variable}`}
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -115,14 +119,14 @@ export default function RootLayout({
       </head>
       <body className={`${lexend} bg-background text-foreground`}>
         <ReactQueryProvider>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </ReactQueryProvider>
       </body>
     </html>

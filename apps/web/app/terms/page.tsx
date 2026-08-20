@@ -62,7 +62,7 @@ const sections = [
   {
     title: "8. Disclaimers and Limitation of Liability",
     body: [
-      "The service is provided on an \"as is\" and \"as available\" basis without warranties of any kind, whether express or implied. We do not guarantee that the service will be uninterrupted, secure, or error-free.",
+      'The service is provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied. We do not guarantee that the service will be uninterrupted, secure, or error-free.',
       "To the maximum extent permitted by law, Stealth shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of the service.",
     ],
   },

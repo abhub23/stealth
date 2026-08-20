@@ -8,33 +8,32 @@ export const auth = betterAuth({
   baseURL: config.betterAuth.url,
   trustedOrigins: [config.app.webUrl],
 
-  advanced:{
-      useSecureCookies: false,
-  
-      cookies: {
-        session_token: {
-          name: "better-auth.session_token",
-          attributes: {
-            httpOnly: true,
-            secure: false,
-            sameSite: "lax",
-          },
+  advanced: {
+    useSecureCookies: false,
+
+    cookies: {
+      session_token: {
+        name: "better-auth.session_token",
+        attributes: {
+          httpOnly: true,
+          secure: false,
+          sameSite: "lax",
         },
-        state: {
-          attributes: {
-            httpOnly: true,
-            secure: false,
-            sameSite: "lax",
-          },
-  }, 
-},
-},
+      },
+      state: {
+        attributes: {
+          httpOnly: true,
+          secure: false,
+          sameSite: "lax",
+        },
+      },
+    },
+  },
 
   database: drizzleAdapter(db, { provider: "pg" }),
 
   emailAndPassword: {
     enabled: true,
-    
   },
 
   socialProviders: {

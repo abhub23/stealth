@@ -6,7 +6,10 @@ const config = {
   },
   betterAuth: {
     secret: process.env.BETTER_AUTH_SECRET!,
-    url: process.env.BETTER_AUTH_URL || process.env.API_URL || "http://localhost:4000",
+    url:
+      process.env.BETTER_AUTH_URL ||
+      process.env.API_URL ||
+      "http://localhost:4000",
   },
   google: {
     clientId: process.env.GOOGLE_CLIENT_ID!,

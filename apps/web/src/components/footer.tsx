@@ -29,7 +29,8 @@ export default function Footer() {
                 Ready to automate your workflow?
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Join teams using our AI-driven intelligence<br />
+                Join teams using our AI-driven intelligence
+                <br />
                 platform to ship code 10x faster.
               </p>
             </div>

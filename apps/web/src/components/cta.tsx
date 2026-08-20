@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import HeroFlame from "@/components/effects/flame/hero-flame";
@@ -53,7 +53,9 @@ export default function CTA() {
             }}
             className="lg:text-xl text-muted-foreground max-w-xl mb-6 px-6 md:px-0"
           >
-            Skip the setup. Skip the boilerplate.<br />Let the agents do the heavy lifting.
+            Skip the setup. Skip the boilerplate.
+            <br />
+            Let the agents do the heavy lifting.
           </motion.p>
 
           <motion.div
@@ -85,7 +87,7 @@ export default function CTA() {
             </Button>
           </motion.div>
 
-          <div className="-mt-[100px] mb-10 lg:mb-24">
+          <div className="-mt-25 mb-10 lg:mb-24">
             <HeroFlame />
           </div>
 

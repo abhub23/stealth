@@ -2,11 +2,7 @@
 
 import { type FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
@@ -19,9 +15,7 @@ export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleEmailPasswordLogin = async (
-    e: FormEvent<HTMLFormElement>,
-  ) => {
+  const handleEmailPasswordLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
@@ -130,7 +124,11 @@ export default function Page() {
                   onClick={googleSignIn}
                   className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
                 >
-                  <img src="/icons/google.svg" alt="Google" className="size-5" />
+                  <img
+                    src="/icons/google.svg"
+                    alt="Google"
+                    className="size-5"
+                  />
                   Continue with Google
                 </Button>
               </Field>

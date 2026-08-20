@@ -15,9 +15,7 @@ export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleEmailPasswordSignup = async (
-    e: FormEvent<HTMLFormElement>,
-  ) => {
+  const handleEmailPasswordSignup = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
@@ -147,7 +145,11 @@ export default function Page() {
                   onClick={googleSignIn}
                   className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
                 >
-                  <img src="/icons/google.svg" alt="Google" className="size-5" />
+                  <img
+                    src="/icons/google.svg"
+                    alt="Google"
+                    className="size-5"
+                  />
                   Continue with Google
                 </Button>
               </Field>

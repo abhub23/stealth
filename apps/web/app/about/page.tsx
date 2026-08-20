@@ -12,18 +12,25 @@ export default function About() {
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32">
           {/* Modern mesh gradient background */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
-          
+
           <Container className="relative z-10">
             <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
               <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-8 backdrop-blur-sm">
                 ✨ Building the future of AI
               </div>
-              <Heading as="h1" className="mb-6 text-5xl md:text-7xl font-bold tracking-tight text-balance">
-                Building the future of <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">AI-powered development</span>
+              <Heading
+                as="h1"
+                className="mb-6 text-5xl md:text-7xl font-bold tracking-tight text-balance"
+              >
+                Building the future of{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+                  AI-powered development
+                </span>
               </Heading>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto text-balance">
-                Stealth is on a mission to empower every developer with autonomous AI agents
-                that handle the boring stuff — so you can focus on what matters.
+                Stealth is on a mission to empower every developer with
+                autonomous AI agents that handle the boring stuff — so you can
+                focus on what matters.
               </p>
             </div>
           </Container>
@@ -36,21 +43,25 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
                 <Subheading className="mb-4 text-primary">Our Story</Subheading>
-                <Heading as="h2" className="mb-6 text-3xl md:text-4xl text-balance">
+                <Heading
+                  as="h2"
+                  className="mb-6 text-3xl md:text-4xl text-balance"
+                >
                   From a simple idea to a platform used by thousands
                 </Heading>
               </div>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Stealth started in 2026 with a simple observation: developers spend too much
-                  time on repetitive tasks and not enough time building. We set out to create
-                  AI agents that could handle the grunt work — testing, deployment, monitoring —
-                  so teams could move faster and ship better software.
+                  Stealth started in 2026 with a simple observation: developers
+                  spend too much time on repetitive tasks and not enough time
+                  building. We set out to create AI agents that could handle the
+                  grunt work — testing, deployment, monitoring — so teams could
+                  move faster and ship better software.
                 </p>
                 <p>
-                  We're backed by top-tier investors and a community of passionate developers
-                  who believe that the future of software development is autonomous, collaborative,
-                  and human-centric.
+                  We're backed by top-tier investors and a community of
+                  passionate developers who believe that the future of software
+                  development is autonomous, collaborative, and human-centric.
                 </p>
               </div>
             </div>
@@ -62,7 +73,9 @@ export default function About() {
           <Container className="relative z-10">
             <div className="grid gap-16 lg:grid-cols-12">
               <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-                <Subheading className="mb-4 text-primary">Our Values</Subheading>
+                <Subheading className="mb-4 text-primary">
+                  Our Values
+                </Subheading>
                 <Heading as="h2" className="text-3xl md:text-5xl">
                   The principles that guide everything we do
                 </Heading>
@@ -122,13 +135,17 @@ export default function About() {
           <Container>
             <div className="relative max-w-4xl mx-auto overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-12 md:p-20 text-center">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent blur-2xl" />
-              
+
               <div className="relative z-10">
-                <Heading as="h2" className="mb-6 text-4xl md:text-5xl font-bold tracking-tight">
+                <Heading
+                  as="h2"
+                  className="mb-6 text-4xl md:text-5xl font-bold tracking-tight"
+                >
                   Ready to get started?
                 </Heading>
                 <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto text-balance">
-                  Join thousands of developers who are already shipping faster with Stealth.
+                  Join thousands of developers who are already shipping faster
+                  with Stealth.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a

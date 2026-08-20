@@ -2,17 +2,17 @@ import Navbar from "@/components/navbar";
 import CTA from "@/components/cta";
 import FAQs from "@/components/faqs";
 import Footer from "@/components/footer";
-import { BentoCard } from '@/components/bento-card'
-import { Container } from '@/components/container'
-import { Keyboard } from '@/components/keyboard'
-import { LogoCluster } from '@/components/logo-cluster'
-import { Map } from '@/components/map'
-import { Heading } from '@/components/text'
+import { BentoCard } from "@/components/bento-card";
+import { Container } from "@/components/container";
+import { Keyboard } from "@/components/keyboard";
+import { LogoCluster } from "@/components/logo-cluster";
+import { Map } from "@/components/map";
+import { Heading } from "@/components/text";
 
 function BentoSection() {
   return (
     <Container className="pb-10">
-      <Heading as="h3" className="mt-2 max-w-3xl !text-foreground">
+      <Heading as="h3" className="mt-2 max-w-3xl text-foreground!">
         Know more about your customers than they do.
       </Heading>
 
@@ -24,7 +24,7 @@ function BentoSection() {
           graphic={
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
           }
-          fade={['bottom']}
+          fade={["bottom"]}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
@@ -34,7 +34,7 @@ function BentoSection() {
           graphic={
             <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat" />
           }
-          fade={['bottom']}
+          fade={["bottom"]}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
         <BentoCard
@@ -43,7 +43,7 @@ function BentoSection() {
           description="It's never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
           graphic={
             <div className="flex size-full pt-10 pl-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
+              <Keyboard highlighted={["LeftCommand", "LeftShift", "D"]} />
             </div>
           }
           className="lg:col-span-2 lg:rounded-bl-4xl"
@@ -64,7 +64,7 @@ function BentoSection() {
         />
       </div>
     </Container>
-  )
+  );
 }
 
 export default function Home() {
@@ -78,5 +78,5 @@ export default function Home() {
       <FAQs />
       <Footer />
     </>
-  )
+  );
 }

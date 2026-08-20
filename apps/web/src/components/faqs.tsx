@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 const items = [
   {
@@ -37,7 +37,7 @@ const items = [
     content:
       "We offer a free tier to get started, with paid plans for teams and enterprise needs.",
   },
-]
+];
 
 export default function FAQs() {
   return (
@@ -51,26 +51,26 @@ export default function FAQs() {
             Everything you need to know about us.
           </p>
         </div>
-        <Accordion
-          type="single"
-          collapsible
-          className="max-w-2xl mx-auto"
-        >
+        <Accordion type="single" collapsible className="max-w-2xl mx-auto">
           {items.map((item, index) => (
             <AccordionItem
               key={item.value}
               value={item.value}
               className={cn(
                 "border-0 bg-transparent rounded-none",
-                index !== items.length - 1 && "border-b"
+                index !== items.length - 1 && "border-b",
               )}
             >
-              <AccordionTrigger className="text-base sm:text-lg">{item.trigger}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm sm:text-base">{item.content}</AccordionContent>
+              <AccordionTrigger className="text-base sm:text-lg">
+                {item.trigger}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-sm sm:text-base">
+                {item.content}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
     </section>
-  )
+  );
 }

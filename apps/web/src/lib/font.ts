@@ -5,7 +5,7 @@ const lexend_font = Lexend({
 });
 
 export const literataFont = Literata({
-  weight: '500',
+  weight: "500",
   subsets: ["latin"],
   style: "italic",
   display: "swap",

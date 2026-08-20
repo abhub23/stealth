@@ -121,10 +121,7 @@ export default function Navbar() {
           <div className="w-full h-px bg-white/10"></div>
 
           <Button asChild className="w-full rounded-md text-base h-auto py-1.5">
-            <Link
-              href="/signin"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>
               Sign In
             </Link>
           </Button>

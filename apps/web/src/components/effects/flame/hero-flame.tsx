@@ -79,10 +79,7 @@ export default function HeroFlame({ absolute }: { absolute?: boolean }) {
     : "w-[686px] h-[190px] mx-auto flex gap-16 pointer-events-none select-none";
 
   return (
-    <div
-      className={wrapperClass}
-      ref={wrapperRef}
-    >
+    <div className={wrapperClass} ref={wrapperRef}>
       <div className="flex-1 overflow-clip relative">
         <div
           className="text-black-alpha-20 font-ascii absolute bottom-0 -left-380 fc-decoration"
