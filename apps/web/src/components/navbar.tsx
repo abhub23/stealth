@@ -42,7 +42,7 @@ export default function Navbar() {
             Docs
           </Link>
           <Link
-            href="#"
+            href="/pricing"
             className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
           >
             Pricing
@@ -96,7 +96,7 @@ export default function Navbar() {
               Docs
             </Link>
             <Link
-              href="#"
+              href="/pricing"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
             >
