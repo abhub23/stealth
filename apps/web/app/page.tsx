@@ -20,7 +20,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Insight"
           title="Get perfect clarity"
-          description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
+          description="AI agents turn complex workflows into clear, actionable insights, so your team can make better decisions faster."
           graphic={
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
           }
@@ -58,7 +58,7 @@ function BentoSection() {
         <BentoCard
           eyebrow="Limitless"
           title="Sell globally"
-          description="Radiant helps you sell in locations currently under international embargo."
+          description="Scale your agents globally with reliable infrastructure built for every market."
           graphic={<Map />}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
