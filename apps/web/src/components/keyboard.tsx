@@ -1,8 +1,7 @@
 "use client";
-
-import { clsx } from "clsx";
 import { motion } from "motion/react";
 import { createContext, useContext } from "react";
+import { clsx } from "cn";
 
 const KeyboardContext = createContext<{ highlighted: string[] }>({
   highlighted: [],

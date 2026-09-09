@@ -1,8 +1,7 @@
 "use client";
-
-import { clsx } from "clsx";
 import { motion } from "motion/react";
 import { Mark } from "./logo";
+import { clsx } from "cn";
 
 function Circle({
   size,

@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+import { clsx } from "cn";
 
 type HeadingProps = {
   as?: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

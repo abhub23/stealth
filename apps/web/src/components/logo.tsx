@@ -1,7 +1,6 @@
 "use client";
-
-import { clsx } from "clsx";
 import { motion } from "motion/react";
+import { clsx } from "cn";
 
 export function Logo({ className }: { className?: string }) {
   const transition = {
