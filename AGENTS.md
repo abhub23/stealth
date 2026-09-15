@@ -10,7 +10,7 @@ This is a Turborepo monorepo containing:
 - **apps/api**: Bun + Elysia backend API
 - **packages/db**: Database utilities package
 
-Package manager: **Bun** (v1.3.10)
+Package manager: **Bun** (v1.4.2)
 
 ---
 
@@ -80,7 +80,6 @@ bun run dev --filter=web
 
 - **Web app**: Use path alias `@/` for local imports
   ```typescript
-  import { cn } from "@/lib/utils";
   import Button from "@/components/ui/button";
   ```
 - **Relative imports** for sibling components when cleaner
