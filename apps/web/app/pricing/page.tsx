@@ -24,11 +24,7 @@ const plans = [
     price: "$10",
     period: "/month",
     description: "For teams that want the full experience.",
-    features: [
-      "Everything in Free",
-      "Unlimited usage",
-      "Priority support",
-    ],
+    features: ["Everything in Free", "Unlimited usage", "Priority support"],
     cta: "Purchase Plan",
     href: "/signup",
     highlight: true,
@@ -82,7 +78,9 @@ export default function Pricing() {
                   <h2 className="text-2xl font-bold tracking-tight text-foreground">
                     {plan.name}
                   </h2>
-                  <p className="mt-2 text-muted-foreground">{plan.description}</p>
+                  <p className="mt-2 text-muted-foreground">
+                    {plan.description}
+                  </p>
 
                   <div className="mt-6 flex items-baseline gap-1">
                     <span className="text-5xl font-bold tracking-tight text-foreground">
