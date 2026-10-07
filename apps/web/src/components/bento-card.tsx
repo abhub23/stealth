@@ -27,17 +27,17 @@ export function BentoCard({
         className,
         "group relative flex flex-col overflow-hidden rounded-lg",
         "bg-white shadow-xs ring-1 ring-black/5",
-        // dark mode only
-        "dark:bg-neutral-900 dark:shadow-none dark:ring-white/10",
+        // dark mode only — matches the page so the fade blends seamlessly
+        "dark:bg-background dark:shadow-none dark:ring-white/10",
       )}
     >
       <div className="relative h-80 shrink-0">
         {graphic}
         {fade.includes("top") && (
-          <div className="absolute inset-0 bg-linear-to-b from-white to-50% dark:from-neutral-900" />
+          <div className="absolute inset-0 bg-linear-to-b from-white to-50% dark:from-background" />
         )}
         {fade.includes("bottom") && (
-          <div className="absolute inset-0 bg-linear-to-t from-white to-50% dark:from-neutral-900" />
+          <div className="absolute inset-0 bg-linear-to-t from-white to-50% dark:from-background" />
         )}
       </div>
       <div className="relative p-10">
