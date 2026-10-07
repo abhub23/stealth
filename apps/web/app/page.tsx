@@ -22,7 +22,7 @@ function BentoSection() {
           title="Get perfect clarity"
           description="AI agents turn complex workflows into clear, actionable insights, so your team can make better decisions faster."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat dark:invert dark:hue-rotate-180" />
           }
           fade={["bottom"]}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
@@ -32,7 +32,7 @@ function BentoSection() {
           title="Undercut your competitors"
           description="With our advanced data mining, you'll know which companies your leads are talking to and exactly how much they're being charged."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat dark:invert dark:hue-rotate-180" />
           }
           fade={["bottom"]}
           className="lg:col-span-3 lg:rounded-tr-4xl"

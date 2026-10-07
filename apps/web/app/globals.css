@@ -2,6 +2,9 @@
 @import 'tw-animate-css';
 @import "tw-animate-css";
 
+/* next-themes sets `.dark` on <html>, so drive the dark: variant off the class */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
