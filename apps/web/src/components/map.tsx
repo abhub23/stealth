@@ -26,11 +26,11 @@ function Marker({
       <svg fill="none" viewBox="0 0 38 38" className="absolute size-full">
         <path
           d="M29.607 5.193c5.858 5.857 5.858 15.355 0 21.213l-9.9 9.9-.707.706-.708-.708-9.899-9.898c-5.857-5.858-5.857-15.356 0-21.213 5.858-5.858 15.356-5.858 21.214 0Z"
-          className="fill-black/5"
+          className="fill-black/5 dark:fill-white/10"
         />
         <path
           d="m28.9 25.698-9.9 9.9-9.9-9.9C3.634 20.232 3.634 11.367 9.1 5.9 14.569.432 23.433.432 28.9 5.9c5.467 5.468 5.467 14.332 0 19.8Z"
-          className="fill-white"
+          className="fill-white dark:fill-neutral-800"
         />
       </svg>
       <img
@@ -45,7 +45,7 @@ function Marker({
 export function Map() {
   return (
     <div aria-hidden="true" className="relative size-full">
-      <div className="absolute inset-0 bg-[url(/map.png)] mask-[linear-gradient(to_bottom,black_50%,transparent)] bg-size-[530px_430px] bg-position-[center_-75px] bg-no-repeat" />
+      <div className="absolute inset-0 bg-[url(/map.png)] mask-[linear-gradient(to_bottom,black_50%,transparent)] bg-size-[530px_430px] bg-position-[center_-75px] bg-no-repeat dark:opacity-60" />
       <div className="absolute inset-0">
         <Marker src="/map/1.jpg" top={96} offset={-128} delay={0.15} />
         <Marker src="/map/2.jpg" top={160} offset={-16} delay={0.4} />
