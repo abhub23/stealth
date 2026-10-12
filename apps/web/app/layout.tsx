@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
-import { lexend } from "@/lib/font";
+import { fd } from "@/lib/font";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ReactQueryProvider from "@/lib/react-query-provider";
@@ -117,7 +117,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${lexend} bg-background text-foreground`}>
+      <body className={`${fd} bg-background text-foreground`}>
         <ReactQueryProvider>
           <ThemeProvider
             attribute="class"

@@ -1,7 +1,15 @@
-import { Lexend, Literata } from "next/font/google";
+import { Lexend, Literata, Funnel_Display } from "next/font/google";
 
-const lexend_font = Lexend({
+const lexendFont = Lexend({
   weight: "300",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const funnelDisplayFont = Funnel_Display({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const literataFont = Literata({
@@ -11,5 +19,6 @@ export const literataFont = Literata({
   display: "swap",
 });
 
-export const lexend = lexend_font.className;
+export const lexend = lexendFont.className;
+export const fd = funnelDisplayFont.className;
 export const literata = literataFont.className;
