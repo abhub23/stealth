@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 bg-[#14120b] pt-20 overflow-hidden selection:bg-white/30 rounded-tl-3xl rounded-tr-3xl">
       {/* Subtle top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-[oklch(0.985_0_0)]/50 to-transparent opacity-50" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-linear-to-r from-transparent via-[oklch(0.985_0_0)]/50 to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-0 lg:flex lg:items-start">
