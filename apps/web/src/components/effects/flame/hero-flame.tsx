@@ -76,7 +76,7 @@ export default function HeroFlame({ absolute }: { absolute?: boolean }) {
 
   const wrapperClass = absolute
     ? "cw-686 h-190 top-408 absolute flex gap-16 pointer-events-none select-none lg-max:hidden"
-    : "w-[686px] h-[190px] mx-auto flex gap-16 pointer-events-none select-none";
+    : "w-[786px] h-[190px] mx-auto flex gap-16 pointer-events-none select-none";
 
   return (
     <div className={wrapperClass} ref={wrapperRef}>
