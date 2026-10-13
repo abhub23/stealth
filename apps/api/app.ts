@@ -15,6 +15,7 @@ const app = new Elysia()
   )
   .mount(auth.handler)
   .use(healthRoutes)
-  .group("/api/v1", (app) => app.use(usersRoutes));
+  .group("/api/v1", ({use}) => 
+    use(usersRoutes));
 
 export default app;
