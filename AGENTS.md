@@ -28,7 +28,7 @@ bun run dev
 # Lint all apps
 bun run lint
 
-# Format code (Prettier)
+# Format code (Biome)
 bun run fmt
 
 # Type check all apps
@@ -85,11 +85,11 @@ bun run dev --filter=web
 - **Relative imports** for sibling components when cleaner
 - **Group imports**: External first, then blank line, then internal
 
-### Formatting (Prettier)
+### Formatting (Biome)
 
 - Run `bun run fmt` before committing
-- Configured for: `.ts`, `.tsx`, `.md` files
-- Uses default Prettier settings
+- Configured in `biome.json` (applies to all `apps/*` and `packages/*`)
+- Run `bun run lint:biome` to lint, `bun run lint:biome:fix` to auto-fix
 
 ### Naming Conventions
 
