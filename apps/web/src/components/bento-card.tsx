@@ -1,7 +1,7 @@
 "use client";
+import { clsx } from "cn";
 import { motion } from "motion/react";
 import { Subheading } from "./text";
-import { clsx } from "cn";
 
 export function BentoCard({
   className = "",

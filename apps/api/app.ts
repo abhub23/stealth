@@ -1,7 +1,7 @@
-import Elysia from "elysia";
 import cors from "@elysiajs/cors";
-import config from "./src/config/config";
+import Elysia from "elysia";
 import { auth } from "./src/auth";
+import config from "./src/config/config";
 import { healthRoutes } from "./src/modules/health/health.routes";
 import { usersRoutes } from "./src/modules/users/users.routes";
 

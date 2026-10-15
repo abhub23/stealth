@@ -1,7 +1,7 @@
 import "dotenv/config";
+import { randomUUID } from "crypto";
 import { db } from "./index";
 import { user } from "./schema";
-import { randomUUID } from "crypto";
 
 async function seed() {
   await db.insert(user).values({

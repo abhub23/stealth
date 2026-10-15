@@ -1,20 +1,20 @@
 "use client";
 
+import { CheckCircle2, Code2, Database, Lock, TrendingUp, Users, Zap } from "lucide-react";
+import { motion } from "motion/react";
 import {
-  AreaChart,
   Area,
-  LineChart,
-  Line,
-  BarChart,
+  AreaChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
 } from "recharts";
-import { TrendingUp, Users, Zap, Database, Lock, Code2, CheckCircle2 } from "lucide-react";
-import { motion } from "motion/react";
 
 const chartData = [
   { month: "Jan", value: 400, value2: 240 },

@@ -1,9 +1,9 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Link from "next/link";
 import { Container } from "@/components/container";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { Heading } from "@/components/text";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const plans = [
   {

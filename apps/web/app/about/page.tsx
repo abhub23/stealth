@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { Container } from "@/components/container";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { Heading, Subheading } from "@/components/text";
 
 export default function About() {

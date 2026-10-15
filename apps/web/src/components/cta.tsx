@@ -1,11 +1,11 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
 // import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
 import HeroFlame from "@/components/effects/flame/hero-flame";
+import { Button } from "@/components/ui/button";
 
 export default function CTA() {
   return (

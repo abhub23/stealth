@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { XIcon, GithubIcon, LinkedInIcon, MailIcon } from "./logos";
+import { GithubIcon, LinkedInIcon, MailIcon, XIcon } from "./logos";
 
 export default function Footer() {
   const linkStyles =

@@ -1,4 +1,4 @@
-import { Lexend, Literata, Funnel_Display } from "next/font/google";
+import { Funnel_Display, Lexend, Literata } from "next/font/google";
 
 const lexendFont = Lexend({
   weight: "300",

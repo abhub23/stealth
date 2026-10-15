@@ -1,7 +1,7 @@
 "use client";
+import { clsx } from "cn";
 import { motion } from "motion/react";
 import { Mark } from "./logo";
-import { clsx } from "cn";
 
 function Circle({ size, delay, opacity }: { size: number; delay: number; opacity: string }) {
   return (

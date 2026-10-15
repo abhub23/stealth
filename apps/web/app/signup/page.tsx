@@ -1,14 +1,14 @@
 "use client";
 
+import { Loader2 } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { emailSignUp, googleSignIn } from "@/lib/client-auth";
-import { toast } from "sonner";
 
 export default function Page() {
   const router = useRouter();
