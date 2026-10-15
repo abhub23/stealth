@@ -21,7 +21,7 @@ function Marker({
       }}
       transition={{ duration: 0.25, delay, ease: "easeOut" }}
       style={{ "--offset": `${offset}px`, top } as React.CSSProperties}
-      className="absolute left-[calc(50%+var(--offset))] size-[38px] drop-shadow-[0_3px_1px_rgba(0,0,0,.15)]"
+      className="absolute left-[calc(50%+var(--offset))] size-9.5 drop-shadow-[0_3px_1px_rgba(0,0,0,.15)]"
     >
       <svg fill="none" viewBox="0 0 38 38" className="absolute size-full">
         <path
@@ -33,7 +33,7 @@ function Marker({
           className="fill-white dark:fill-neutral-800"
         />
       </svg>
-      <img alt="" src={src} className="absolute top-[4px] left-[7px] size-6 rounded-full" />
+      <img alt="" src={src} className="absolute top-1 left-1.75 size-6 rounded-full" />
     </motion.div>
   );
 }
