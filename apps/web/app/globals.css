@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 @import "tw-animate-css";
 
 /* next-themes sets `.dark` on <html>, so drive the dark: variant off the class */
@@ -40,7 +40,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --accordion-bg: oklch(0.965 0 0);
-  --black-alpha-20: rgba(0, 0, 0, 0.200);
+  --black-alpha-20: rgba(0, 0, 0, 0.2);
 }
 
 .dark {
@@ -77,11 +77,11 @@
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
   --accordion-bg: oklch(0.18 0 0);
-  --black-alpha-20: rgba(255, 255, 255, 0.200);
+  --black-alpha-20: rgba(255, 255, 255, 0.2);
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
+  --font-sans: "Geist", "Geist Fallback";
   --font-mono: var(--font-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -129,14 +129,31 @@
   width: 686px;
   left: calc(50% - 343px);
 }
-.h-190 { height: 190px; }
-.top-408 { top: 408px; }
-.gap-16 { gap: 16px; }
-.text-black-alpha-20 { color: var(--black-alpha-20); }
-.font-ascii { font-family: var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-.fc-decoration { }
-.-left-380 { left: -380px; }
-.-right-380 { right: -380px; }
+.h-190 {
+  height: 190px;
+}
+.top-408 {
+  top: 408px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.text-black-alpha-20 {
+  color: var(--black-alpha-20);
+}
+.font-ascii {
+  font-family:
+    var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+.fc-decoration {
+}
+.-left-380 {
+  left: -380px;
+}
+.-right-380 {
+  right: -380px;
+}
 
 @layer base {
   * {

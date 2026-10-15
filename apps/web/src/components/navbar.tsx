@@ -26,7 +26,7 @@ export default function Navbar() {
           "relative mx-auto flex items-center justify-between transition-all duration-300 ease-in-out pointer-events-auto h-16",
           isScrolled
             ? "max-w-4xl md:px-2 bg-background/60 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
-            : "max-w-6xl md:px-8 bg-background/60 backdrop-blur-md border border-transparent rounded-md",
+            : "max-w-6xl md:px-8 bg-background/60 backdrop-blur-md border border-transparent rounded-md"
         )}
       >
         <Link href="/" className="text-xl font-bold text-foreground ml-6">

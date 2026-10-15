@@ -14,13 +14,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-0 lg:flex lg:items-start">
           {/* Brand Column & CTA */}
           <div className="md:col-span-12 text-left flex flex-col items-start">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3 mb-8 group"
-            >
-              <span className="text-2xl font-bold tracking-tight text-[#e8e6e3]">
-                Stealth
-              </span>
+            <Link href="/" className="inline-flex items-center gap-3 mb-8 group">
+              <span className="text-2xl font-bold tracking-tight text-[#e8e6e3]">Stealth</span>
             </Link>
 
             {/* AI SaaS focused Mini CTA */}
@@ -128,10 +123,7 @@ export default function Footer() {
       </div>
 
       {/* Giant fading wordmark */}
-      <div
-        aria-hidden="true"
-        className="relative pointer-events-none select-none mt-4"
-      >
+      <div aria-hidden="true" className="relative pointer-events-none select-none mt-4">
         {/* <span className="block text-center text-[clamp(80px,18vw,300px)] font-bold leading-[0.85] tracking-tight text-[oklch(0.708_0_0)]/35 [mask-image:linear-gradient(to_top,black_40%,transparent_100%)]">
           Stealth
         </span> */}

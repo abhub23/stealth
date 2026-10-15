@@ -4,10 +4,6 @@ export const metadata: Metadata = {
   title: "Stealth - /sign-up",
 };
 
-export default function SignUpLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SignUpLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

@@ -33,7 +33,7 @@ function setIntervalOnVisible({
         }
       });
     },
-    { threshold },
+    { threshold }
   );
 
   observer.observe(element);

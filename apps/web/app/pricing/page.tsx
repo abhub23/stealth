@@ -11,11 +11,7 @@ const plans = [
     price: "$0",
     period: "/month",
     description: "Get started with Stealth for free.",
-    features: [
-      "Core features included",
-      "Community support",
-      "Basic usage limits",
-    ],
+    features: ["Core features included", "Community support", "Basic usage limits"],
     cta: "Get Started",
     href: "/signup",
   },
@@ -75,12 +71,8 @@ export default function Pricing() {
                     </span>
                   )}
 
-                  <h2 className="text-2xl font-bold tracking-tight text-foreground">
-                    {plan.name}
-                  </h2>
-                  <p className="mt-2 text-muted-foreground">
-                    {plan.description}
-                  </p>
+                  <h2 className="text-2xl font-bold tracking-tight text-foreground">{plan.name}</h2>
+                  <p className="mt-2 text-muted-foreground">{plan.description}</p>
 
                   <div className="mt-6 flex items-baseline gap-1">
                     <span className="text-5xl font-bold tracking-tight text-foreground">
@@ -91,10 +83,7 @@ export default function Pricing() {
 
                   <ul className="mt-8 flex-1 space-y-3">
                     {plan.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-3 text-muted-foreground"
-                      >
+                      <li key={feature} className="flex items-center gap-3 text-muted-foreground">
                         <span className="text-primary">✓</span>
                         {feature}
                       </li>

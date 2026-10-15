@@ -3,15 +3,7 @@ import { motion } from "motion/react";
 import { Mark } from "./logo";
 import { clsx } from "cn";
 
-function Circle({
-  size,
-  delay,
-  opacity,
-}: {
-  size: number;
-  delay: number;
-  opacity: string;
-}) {
+function Circle({ size, delay, opacity }: { size: number; delay: number; opacity: string }) {
   return (
     <motion.div
       variants={{
@@ -32,7 +24,7 @@ function Circle({
       className={clsx(
         "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full",
         "bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,var(--color-blue-500)_var(--opacity),transparent)_100%)]",
-        "ring-1 ring-blue-500/8 ring-inset",
+        "ring-1 ring-blue-500/8 ring-inset"
       )}
     />
   );

@@ -19,10 +19,6 @@ export async function emailSignIn(email: string, password: string) {
   return authClient.signIn.email({ email, password });
 }
 
-export async function emailSignUp(
-  name: string,
-  email: string,
-  password: string,
-) {
+export async function emailSignUp(name: string, email: string, password: string) {
   return authClient.signUp.email({ email, password, name });
 }

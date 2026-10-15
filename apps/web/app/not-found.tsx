@@ -20,8 +20,8 @@ export default function NotFound() {
               </span>
 
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance md:text-xl">
-                The URL you requested doesn&apos;t exist, was moved, or was
-                never shipped. Even our agents couldn&apos;t find it.
+                The URL you requested doesn&apos;t exist, was moved, or was never shipped. Even our
+                agents couldn&apos;t find it.
               </p>
 
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">

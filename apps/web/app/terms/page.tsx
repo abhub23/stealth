@@ -112,10 +112,7 @@ export default function TermsPage() {
                     </h2>
                     <div className="space-y-4">
                       {section.body.map((paragraph, i) => (
-                        <p
-                          key={i}
-                          className="text-base leading-relaxed text-muted-foreground"
-                        >
+                        <p key={i} className="text-base leading-relaxed text-muted-foreground">
                           {paragraph}
                         </p>
                       ))}

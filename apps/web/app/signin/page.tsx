@@ -45,15 +45,10 @@ export default function Page() {
         <div className="w-full max-w-md">
           <div className="text-center">
             <h1 className="text-3xl font-medium mb-2">Welcome to Stealth</h1>
-            <p className="text-muted-foreground text-sm">
-              Sign in to your account
-            </p>
+            <p className="text-muted-foreground text-sm">Sign in to your account</p>
           </div>
 
-          <form
-            className="flex flex-col gap-6"
-            onSubmit={handleEmailPasswordLogin}
-          >
+          <form className="flex flex-col gap-6" onSubmit={handleEmailPasswordLogin}>
             <FieldGroup className="rounded-lg p-6">
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -86,9 +81,7 @@ export default function Page() {
                 />
               </Field>
 
-              {error && (
-                <p className="text-sm text-destructive text-center">{error}</p>
-              )}
+              {error && <p className="text-sm text-destructive text-center">{error}</p>}
 
               <Field>
                 <Button
@@ -98,8 +91,7 @@ export default function Page() {
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center">
-                      Signing in{" "}
-                      <Loader2 className="ml-2 size-4 animate-spin" />
+                      Signing in <Loader2 className="ml-2 size-4 animate-spin" />
                     </span>
                   ) : (
                     "Sign In"
@@ -112,9 +104,7 @@ export default function Page() {
                   <span className="w-full border-t border-border" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
-                    Or continue with
-                  </span>
+                  <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
                 </div>
               </div>
 
@@ -124,21 +114,14 @@ export default function Page() {
                   onClick={googleSignIn}
                   className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
                 >
-                  <img
-                    src="/icons/google.svg"
-                    alt="Google"
-                    className="size-5"
-                  />
+                  <img src="/icons/google.svg" alt="Google" className="size-5" />
                   Continue with Google
                 </Button>
               </Field>
 
               <p className="text-center text-sm text-muted-foreground">
                 Don&apos;t have an account?{" "}
-                <Link
-                  href="/signup"
-                  className="hover:text-foreground transition-colors"
-                >
+                <Link href="/signup" className="hover:text-foreground transition-colors">
                   Sign up
                 </Link>
               </p>

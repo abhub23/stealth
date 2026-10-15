@@ -5,8 +5,7 @@ import { Container } from "@/components/container";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Stealth",
-  description:
-    "How Stealth collects, uses, and protects your personal information.",
+  description: "How Stealth collects, uses, and protects your personal information.",
 };
 
 const sections = [
@@ -112,10 +111,7 @@ export default function PrivacyPage() {
                     </h2>
                     <div className="space-y-4">
                       {section.body.map((paragraph, i) => (
-                        <p
-                          key={i}
-                          className="text-base leading-relaxed text-muted-foreground"
-                        >
+                        <p key={i} className="text-base leading-relaxed text-muted-foreground">
                           {paragraph}
                         </p>
                       ))}

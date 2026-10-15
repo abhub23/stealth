@@ -92,11 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${robotoMono.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning className={`${robotoMono.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{

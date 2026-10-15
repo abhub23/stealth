@@ -13,15 +13,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import {
-  TrendingUp,
-  Users,
-  Zap,
-  Database,
-  Lock,
-  Code2,
-  CheckCircle2,
-} from "lucide-react";
+import { TrendingUp, Users, Zap, Database, Lock, Code2, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
 
 const chartData = [
@@ -38,12 +30,8 @@ export default function BentoGrid() {
     <main className="min-h-screen p-6 md:p-8 lg:p-12">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
-            Dashboard
-          </h1>
-          <p className="text-gray-400 text-lg">
-            Real-time analytics and insights
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Dashboard</h1>
+          <p className="text-gray-400 text-lg">Real-time analytics and insights</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
@@ -56,12 +44,8 @@ export default function BentoGrid() {
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-2">
-                    Performance Metrics
-                  </h2>
-                  <p className="text-gray-400 text-sm">
-                    Comprehensive analytics across 6 months
-                  </p>
+                  <h2 className="text-3xl font-bold text-white mb-2">Performance Metrics</h2>
+                  <p className="text-gray-400 text-sm">Comprehensive analytics across 6 months</p>
                 </div>
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -84,9 +68,7 @@ export default function BentoGrid() {
                   <p className="text-2xl font-bold text-indigo-500">612K</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-gray-400 text-xs font-medium mb-1">
-                    Growth
-                  </p>
+                  <p className="text-gray-400 text-xs font-medium mb-1">Growth</p>
                   <p className="text-2xl font-bold text-indigo-500">+24%</p>
                 </div>
               </div>
@@ -98,16 +80,8 @@ export default function BentoGrid() {
                       <stop offset="95%" stopColor="#4f46e5" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid
-                    strokeDasharray="3 3"
-                    stroke="#333333"
-                    opacity={0.5}
-                  />
-                  <XAxis
-                    dataKey="month"
-                    stroke="#888888"
-                    style={{ fontSize: "13px" }}
-                  />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333333" opacity={0.5} />
+                  <XAxis dataKey="month" stroke="#888888" style={{ fontSize: "13px" }} />
                   <YAxis stroke="#888888" style={{ fontSize: "13px" }} />
                   <Tooltip
                     contentStyle={{
@@ -141,12 +115,8 @@ export default function BentoGrid() {
                   <h3 className="text-xs font-semibold uppercase text-gray-400 tracking-wider">
                     Active Users
                   </h3>
-                  <p className="text-4xl font-bold text-indigo-500 mt-3">
-                    24,582
-                  </p>
-                  <p className="text-xs text-indigo-400/70 mt-1">
-                    Online right now
-                  </p>
+                  <p className="text-4xl font-bold text-indigo-500 mt-3">24,582</p>
+                  <p className="text-xs text-indigo-400/70 mt-1">Online right now</p>
                 </div>
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
@@ -169,9 +139,7 @@ export default function BentoGrid() {
                   ></motion.div>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-semibold mt-3">
-                ↑ 12% from last week
-              </p>
+              <p className="text-xs text-indigo-400 font-semibold mt-3">↑ 12% from last week</p>
             </div>
           </motion.div>
 
@@ -187,12 +155,8 @@ export default function BentoGrid() {
                   <h3 className="text-xs font-semibold uppercase text-gray-400 tracking-wider">
                     Monthly Revenue
                   </h3>
-                  <p className="text-4xl font-bold text-indigo-500 mt-3">
-                    $48,290
-                  </p>
-                  <p className="text-xs text-indigo-400/70 mt-1">
-                    All channels combined
-                  </p>
+                  <p className="text-4xl font-bold text-indigo-500 mt-3">$48,290</p>
+                  <p className="text-xs text-indigo-400/70 mt-1">All channels combined</p>
                 </div>
                 <motion.div
                   animate={{ rotate: -360 }}
@@ -215,9 +179,7 @@ export default function BentoGrid() {
                   ></motion.div>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-semibold mt-3">
-                ↑ 8% from last month
-              </p>
+              <p className="text-xs text-indigo-400 font-semibold mt-3">↑ 8% from last month</p>
             </div>
           </motion.div>
         </div>
@@ -238,9 +200,7 @@ export default function BentoGrid() {
                   <Database className="w-7 h-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">
-                    Database Performance
-                  </h3>
+                  <h3 className="font-bold text-white text-lg">Database Performance</h3>
                   <p className="text-xs text-indigo-400 font-semibold mt-1">
                     ↑ 23% faster than baseline
                   </p>
@@ -248,16 +208,8 @@ export default function BentoGrid() {
               </div>
               <ResponsiveContainer width="100%" height={100}>
                 <LineChart data={chartData}>
-                  <CartesianGrid
-                    strokeDasharray="3 3"
-                    stroke="#333333"
-                    opacity={0.3}
-                  />
-                  <XAxis
-                    dataKey="month"
-                    stroke="#888888"
-                    style={{ fontSize: "11px" }}
-                  />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333333" opacity={0.3} />
+                  <XAxis dataKey="month" stroke="#888888" style={{ fontSize: "11px" }} />
                   <YAxis hide />
                   <Tooltip
                     contentStyle={{
@@ -300,12 +252,8 @@ export default function BentoGrid() {
                   <Lock className="w-7 h-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">
-                    Security Posture
-                  </h3>
-                  <p className="text-xs text-indigo-400 font-semibold mt-1">
-                    Enterprise Grade
-                  </p>
+                  <h3 className="font-bold text-white text-lg">Security Posture</h3>
+                  <p className="text-xs text-indigo-400 font-semibold mt-1">Enterprise Grade</p>
                 </div>
               </div>
               <div className="space-y-4">
@@ -317,40 +265,26 @@ export default function BentoGrid() {
                     >
                       <CheckCircle2 className="w-5 h-5 text-indigo-500" />
                     </motion.div>
-                    <span className="text-sm font-semibold text-white">
-                      SSL/TLS Encryption
-                    </span>
+                    <span className="text-sm font-semibold text-white">SSL/TLS Encryption</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">
-                    TLS 1.3
-                  </span>
+                  <span className="text-xs text-indigo-400 font-bold">TLS 1.3</span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-indigo-500/5 rounded-lg">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm font-semibold text-white">
-                      2FA Authentication
-                    </span>
+                    <span className="text-sm font-semibold text-white">2FA Authentication</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">
-                    ENABLED
-                  </span>
+                  <span className="text-xs text-indigo-400 font-bold">ENABLED</span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-indigo-500/5 rounded-lg">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm font-semibold text-white">
-                      End-to-End Encrypted
-                    </span>
+                    <span className="text-sm font-semibold text-white">End-to-End Encrypted</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">
-                    AES-256
-                  </span>
+                  <span className="text-xs text-indigo-400 font-bold">AES-256</span>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-bold mt-6 text-center">
-                ✓ 100% SECURE
-              </p>
+              <p className="text-xs text-indigo-400 font-bold mt-6 text-center">✓ 100% SECURE</p>
             </div>
           </motion.div>
 
@@ -369,9 +303,7 @@ export default function BentoGrid() {
                   <Code2 className="w-7 h-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">
-                    Development Activity
-                  </h3>
+                  <h3 className="font-bold text-white text-lg">Development Activity</h3>
                   <p className="text-xs text-indigo-400 font-semibold mt-1">
                     142 commits this month
                   </p>
@@ -379,16 +311,8 @@ export default function BentoGrid() {
               </div>
               <ResponsiveContainer width="100%" height={100}>
                 <BarChart data={chartData}>
-                  <CartesianGrid
-                    strokeDasharray="3 3"
-                    stroke="#333333"
-                    opacity={0.3}
-                  />
-                  <XAxis
-                    dataKey="month"
-                    stroke="#888888"
-                    style={{ fontSize: "11px" }}
-                  />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333333" opacity={0.3} />
+                  <XAxis dataKey="month" stroke="#888888" style={{ fontSize: "11px" }} />
                   <YAxis hide />
                   <Tooltip
                     contentStyle={{
@@ -397,12 +321,7 @@ export default function BentoGrid() {
                       borderRadius: "8px",
                     }}
                   />
-                  <Bar
-                    dataKey="value2"
-                    fill="#4f46e5"
-                    radius={6}
-                    isAnimationActive={true}
-                  />
+                  <Bar dataKey="value2" fill="#4f46e5" radius={6} isAnimationActive={true} />
                 </BarChart>
               </ResponsiveContainer>
               <div className="flex items-center justify-between mt-4 pt-4 border-t border-neutral-800">

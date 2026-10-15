@@ -28,7 +28,7 @@ export function BentoCard({
         "group relative flex flex-col overflow-hidden rounded-lg",
         "bg-white shadow-xs ring-1 ring-black/5",
         // dark mode only — matches the page so the fade blends seamlessly
-        "dark:bg-background dark:shadow-none dark:ring-white/10",
+        "dark:bg-background dark:shadow-none dark:ring-white/10"
       )}
     >
       <div className="relative h-80 shrink-0">

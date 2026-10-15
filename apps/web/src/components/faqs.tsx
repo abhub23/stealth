@@ -28,14 +28,12 @@ const items = [
   {
     value: "support",
     trigger: "How can I contact customer support?",
-    content:
-      "Reach us via email or live chat. We respond within 24 hours during business days.",
+    content: "Reach us via email or live chat. We respond within 24 hours during business days.",
   },
   {
     value: "pricing",
     trigger: "How much does it cost?",
-    content:
-      "We offer a free tier to get started, with paid plans for teams and enterprise needs.",
+    content: "We offer a free tier to get started, with paid plans for teams and enterprise needs.",
   },
 ];
 
@@ -47,9 +45,7 @@ export default function FAQs() {
           <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
             FAQs
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            Everything you need to know about us.
-          </p>
+          <p className="mt-3 text-muted-foreground">Everything you need to know about us.</p>
         </div>
         <Accordion type="single" collapsible className="max-w-2xl mx-auto">
           {items.map((item, index) => (
@@ -58,12 +54,10 @@ export default function FAQs() {
               value={item.value}
               className={cn(
                 "border-0 bg-transparent rounded-none",
-                index !== items.length - 1 && "border-b",
+                index !== items.length - 1 && "border-b"
               )}
             >
-              <AccordionTrigger className="text-base sm:text-lg">
-                {item.trigger}
-              </AccordionTrigger>
+              <AccordionTrigger className="text-base sm:text-lg">{item.trigger}</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                 {item.content}
               </AccordionContent>

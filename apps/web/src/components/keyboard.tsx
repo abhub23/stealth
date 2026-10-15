@@ -60,7 +60,7 @@ function Key({
         "[:where(&_svg)]:h-3.5 [:where(&_svg)]:fill-gray-600",
         // dark mode only
         "dark:bg-neutral-800 dark:from-white/5 dark:ring-white/10 dark:shadow-none",
-        "dark:[:where(&_svg)]:fill-neutral-300",
+        "dark:[:where(&_svg)]:fill-neutral-300"
       )}
     >
       {children}

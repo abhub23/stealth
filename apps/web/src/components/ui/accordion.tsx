@@ -6,10 +6,7 @@ import { Accordion as AccordionPrimitive } from "radix-ui";
 import { cn } from "cn";
 import { ChevronDown } from "lucide-react";
 
-function Accordion({
-  className,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Root>) {
+function Accordion({ className, ...props }: React.ComponentProps<typeof AccordionPrimitive.Root>) {
   return (
     <AccordionPrimitive.Root
       data-slot="accordion"
@@ -43,7 +40,7 @@ function AccordionTrigger({
         data-slot="accordion-trigger"
         className={cn(
           "group/accordion-trigger relative flex flex-1 items-center justify-between rounded-none py-2.5 text-left text-md font-medium transition-all outline-none focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground",
-          className,
+          className
         )}
         {...props}
       >
@@ -67,14 +64,14 @@ function AccordionContent({
       data-slot="accordion-content"
       className={cn(
         "overflow-hidden text-md data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up",
-        className,
+        className
       )}
       {...props}
     >
       <div
         className={cn(
           "h-(--radix-accordion-content-height) pt-0 pb-2.5 font-normal [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
-          className,
+          className
         )}
       >
         {children}
