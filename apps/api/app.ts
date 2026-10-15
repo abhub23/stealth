@@ -11,11 +11,10 @@ const app = new Elysia()
       origin: [config.app.webUrl],
       credentials: true,
       allowedHeaders: ["Content-Type", "Authorization"],
-    }),
+    })
   )
   .mount(auth.handler)
   .use(healthRoutes)
-  .group("/api/v1", ({use}) => 
-    use(usersRoutes));
+  .group("/api/v1", ({ use }) => use(usersRoutes));
 
 export default app;
