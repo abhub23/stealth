@@ -28,23 +28,23 @@ const chartData = [
 export default function BentoGrid() {
   return (
     <main className="min-h-screen p-6 md:p-8 lg:p-12">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Dashboard</h1>
+          <h1 className="mb-3 font-bold text-4xl text-white md:text-5xl">Dashboard</h1>
           <p className="text-gray-400 text-lg">Real-time analytics and insights</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-2 lg:row-span-2 border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow overflow-hidden relative"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl lg:col-span-2 lg:row-span-2"
           >
             <div className="relative z-10">
-              <div className="flex items-center justify-between mb-8">
+              <div className="mb-8 flex items-center justify-between">
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-2">Performance Metrics</h2>
+                  <h2 className="mb-2 font-bold text-3xl text-white">Performance Metrics</h2>
                   <p className="text-gray-400 text-sm">Comprehensive analytics across 6 months</p>
                 </div>
                 <motion.div
@@ -55,7 +55,7 @@ export default function BentoGrid() {
                     ease: "linear",
                   }}
                 >
-                  <TrendingUp className="w-10 h-10 text-indigo-500" />
+                  <TrendingUp className="h-10 w-10 text-indigo-500" />
                 </motion.div>
               </div>
               <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-neutral-800/30 rounded-xl backdrop-blur-sm">
