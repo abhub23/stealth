@@ -11,10 +11,14 @@
     "db:push": "bun run --filter=@db db:push",
     "db:studio": "bun run --filter=@db db:studio",
     "lint": "turbo run lint",
+    "lint:biome": "biome check .",
+    "lint:biome:fix": "biome check --write .",
     "fmt": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "fmt:biome": "biome format --write .",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.14",
     "drizzle-kit": "^0.31.10",
     "prettier": "^3.8.1",
     "turbo": "^2.11.7",
