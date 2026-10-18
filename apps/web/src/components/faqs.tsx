@@ -40,20 +40,20 @@ const items = [
 export default function FAQs() {
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground">
+          <h2 className="font-semibold text-3xl text-foreground tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
             FAQs
           </h2>
           <p className="mt-3 text-muted-foreground">Everything you need to know about us.</p>
         </div>
-        <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+        <Accordion type="single" collapsible className="mx-auto max-w-2xl">
           {items.map((item, index) => (
             <AccordionItem
               key={item.value}
               value={item.value}
               className={cn(
-                "border-0 bg-transparent rounded-none",
+                "rounded-none border-0 bg-transparent",
                 index !== items.length - 1 && "border-b"
               )}
             >

@@ -80,9 +80,10 @@ export default function HeroFlame({ absolute }: { absolute?: boolean }) {
 
   return (
     <div className={wrapperClass} ref={wrapperRef}>
-      <div className="flex-1 overflow-clip relative">
+      <div className="relative flex-1 overflow-clip">
         <div
-          className="text-black-alpha-20 font-ascii absolute bottom-0 -left-380 fc-decoration"
+          className="fc-decoration absolute bottom-0 -left-380 font-ascii text-black-alpha-20"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static local ASCII-art JSON with no user input, required for initial flame frame
           dangerouslySetInnerHTML={{ __html: data[0] }}
           ref={ref}
           style={{
@@ -93,9 +94,10 @@ export default function HeroFlame({ absolute }: { absolute?: boolean }) {
         />
       </div>
 
-      <div className="flex-1 overflow-clip relative">
+      <div className="relative flex-1 overflow-clip">
         <div
-          className="text-black-alpha-20 font-ascii absolute bottom-0 -right-380 -scale-x-100 fc-decoration"
+          className="fc-decoration absolute -right-380 bottom-0 -scale-x-100 font-ascii text-black-alpha-20"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static local ASCII-art JSON with no user input, required for initial flame frame
           dangerouslySetInnerHTML={{ __html: data[0] }}
           ref={ref2}
           style={{
