@@ -63,7 +63,7 @@ export default function Page() {
                     type="text"
                     placeholder="John"
                     required
-                    className="!bg-transparent h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
+                    className="bg-transparent! h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                   />
                 </Field>
 
@@ -75,7 +75,7 @@ export default function Page() {
                     type="text"
                     placeholder="Doe"
                     required
-                    className="!bg-transparent h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
+                    className="bg-transparent! h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                   />
                 </Field>
               </div>
@@ -88,7 +88,7 @@ export default function Page() {
                   type="email"
                   placeholder="xyz@gmail.com"
                   required
-                  className="!bg-transparent h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
+                  className="bg-transparent! h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 
@@ -99,7 +99,7 @@ export default function Page() {
                   name="password"
                   type="password"
                   required
-                  className="!bg-transparent h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
+                  className="bg-transparent! h-12 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 

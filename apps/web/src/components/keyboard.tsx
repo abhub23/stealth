@@ -654,7 +654,7 @@ function BackSlashKey() {
 function CapsLockKey() {
   return (
     <Key name="CapsLock" width={72}>
-      <svg viewBox="0 0 3 3" className="mt-1 mr-auto h-[3px] fill-gray-500">
+      <svg viewBox="0 0 3 3" className="mt-1 mr-auto h-0.75 fill-gray-500">
         <title>CapsLock</title>
         <path d="M3 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
       </svg>
