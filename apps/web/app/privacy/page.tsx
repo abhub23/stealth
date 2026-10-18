@@ -86,32 +86,35 @@ export default function PrivacyPage() {
       <Navbar />
       <main className="overflow-hidden bg-background">
         <section className="relative pt-32 pb-16 md:pt-48 md:pb-24">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
+          <div className="absolute top-0 left-1/2 h-125 w-full max-w-3xl -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
 
           <Container className="relative z-10">
-            <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-              <h1 className="mb-6 text-5xl md:text-6xl font-bold tracking-tight text-balance">
+            <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+              <h1 className="mb-6 text-balance font-bold text-5xl tracking-tight md:text-6xl">
                 Privacy Policy
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-balance">
+              <p className="mx-auto max-w-2xl text-balance text-lg text-muted-foreground leading-relaxed">
                 Last updated: August 11, 2026
               </p>
             </div>
           </Container>
         </section>
 
-        <section className="pb-24 relative">
+        <section className="relative pb-24">
           <Container>
-            <div className="max-w-3xl mx-auto">
+            <div className="mx-auto max-w-3xl">
               <div className="space-y-12">
                 {sections.map((section) => (
                   <div key={section.title}>
-                    <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-foreground mb-4">
+                    <h2 className="mb-4 font-semibold text-foreground text-xl tracking-tight md:text-2xl">
                       {section.title}
                     </h2>
                     <div className="space-y-4">
-                      {section.body.map((paragraph, i) => (
-                        <p key={i} className="text-base leading-relaxed text-muted-foreground">
+                      {section.body.map((paragraph) => (
+                        <p
+                          key={paragraph}
+                          className="text-base text-muted-foreground leading-relaxed"
+                        >
                           {paragraph}
                         </p>
                       ))}

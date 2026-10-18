@@ -95,6 +95,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${robotoMono.variable}`}>
       <head>
         <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static inline theme script with no user input, required to set the theme class before paint and prevent flash
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

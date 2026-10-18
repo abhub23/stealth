@@ -33,20 +33,20 @@ export default function Pricing() {
       <Navbar />
       <main className="overflow-hidden bg-background">
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-125 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
+          <div className="absolute top-0 left-1/2 h-125 w-full max-w-3xl -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
 
           <Container className="relative z-10">
-            <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-              <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-8 backdrop-blur-sm">
+            <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+              <div className="mb-8 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 font-medium text-primary text-sm backdrop-blur-sm">
                 ✨ Simple, transparent pricing
               </div>
               <Heading
                 as="h1"
-                className="mb-6 text-5xl md:text-7xl font-bold tracking-tight text-balance"
+                className="mb-6 text-balance font-bold text-5xl tracking-tight md:text-7xl"
               >
                 Pricing that scales with you
               </Heading>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto text-balance">
+              <p className="mx-auto max-w-2xl text-balance text-muted-foreground text-xl leading-relaxed">
                 Start free, upgrade when you&apos;re ready. No hidden fees.
               </p>
             </div>
@@ -66,16 +66,16 @@ export default function Pricing() {
                   }
                 >
                   {plan.highlight && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 font-semibold text-primary-foreground text-xs">
                       Popular
                     </span>
                   )}
 
-                  <h2 className="text-2xl font-bold tracking-tight text-foreground">{plan.name}</h2>
+                  <h2 className="font-bold text-2xl text-foreground tracking-tight">{plan.name}</h2>
                   <p className="mt-2 text-muted-foreground">{plan.description}</p>
 
                   <div className="mt-6 flex items-baseline gap-1">
-                    <span className="text-5xl font-bold tracking-tight text-foreground">
+                    <span className="font-bold text-5xl text-foreground tracking-tight">
                       {plan.price}
                     </span>
                     <span className="text-muted-foreground">{plan.period}</span>
@@ -94,7 +94,7 @@ export default function Pricing() {
                     asChild
                     size="lg"
                     variant={plan.highlight ? "default" : "outline"}
-                    className="mt-10 w-full rounded-md h-11 text-sm"
+                    className="mt-10 h-11 w-full rounded-md text-sm"
                   >
                     <Link href={plan.href}>{plan.cta}</Link>
                   </Button>

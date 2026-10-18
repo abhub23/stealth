@@ -58,18 +58,18 @@ export default function BentoGrid() {
                   <TrendingUp className="h-10 w-10 text-indigo-500" />
                 </motion.div>
               </div>
-              <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-neutral-800/30 rounded-xl backdrop-blur-sm">
+              <div className="mb-8 grid grid-cols-3 gap-4 rounded-xl bg-neutral-800/30 p-4 backdrop-blur-sm">
                 <div className="text-center">
-                  <p className="text-gray-400 text-xs font-medium mb-1">Peak</p>
-                  <p className="text-2xl font-bold text-indigo-500">842K</p>
+                  <p className="mb-1 font-medium text-gray-400 text-xs">Peak</p>
+                  <p className="font-bold text-2xl text-indigo-500">842K</p>
                 </div>
-                <div className="text-center border-l border-r border-neutral-700">
-                  <p className="text-gray-400 text-xs font-medium mb-1">Avg</p>
-                  <p className="text-2xl font-bold text-indigo-500">612K</p>
+                <div className="border-neutral-700 border-r border-l text-center">
+                  <p className="mb-1 font-medium text-gray-400 text-xs">Avg</p>
+                  <p className="font-bold text-2xl text-indigo-500">612K</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-gray-400 text-xs font-medium mb-1">Growth</p>
-                  <p className="text-2xl font-bold text-indigo-500">+24%</p>
+                  <p className="mb-1 font-medium text-gray-400 text-xs">Growth</p>
+                  <p className="font-bold text-2xl text-indigo-500">+24%</p>
                 </div>
               </div>
               <ResponsiveContainer width="100%" height={220}>
@@ -107,39 +107,39 @@ export default function BentoGrid() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl"
           >
             <div className="relative z-10">
-              <div className="flex items-center justify-between mb-8">
+              <div className="mb-8 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs font-semibold uppercase text-gray-400 tracking-wider">
+                  <h3 className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
                     Active Users
                   </h3>
-                  <p className="text-4xl font-bold text-indigo-500 mt-3">24,582</p>
-                  <p className="text-xs text-indigo-400/70 mt-1">Online right now</p>
+                  <p className="mt-3 font-bold text-4xl text-indigo-500">24,582</p>
+                  <p className="mt-1 text-indigo-400/70 text-xs">Online right now</p>
                 </div>
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <Users className="w-12 h-12 text-indigo-500/30" />
+                  <Users className="h-12 w-12 text-indigo-500/30" />
                 </motion.div>
               </div>
               <div className="space-y-2">
-                <div className="flex justify-between text-xs mb-2">
+                <div className="mb-2 flex justify-between text-xs">
                   <span className="text-gray-400">Capacity</span>
-                  <span className="text-indigo-500 font-semibold">72%</span>
+                  <span className="font-semibold text-indigo-500">72%</span>
                 </div>
-                <div className="w-full bg-neutral-800 rounded-full h-2 overflow-hidden">
+                <div className="h-2 w-full overflow-hidden rounded-full bg-neutral-800">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "72%" }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="bg-indigo-500 h-2 rounded-full"
+                    className="h-2 rounded-full bg-indigo-500"
                   ></motion.div>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-semibold mt-3">↑ 12% from last week</p>
+              <p className="mt-3 font-semibold text-indigo-400 text-xs">↑ 12% from last week</p>
             </div>
           </motion.div>
 
@@ -147,61 +147,61 @@ export default function BentoGrid() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl"
           >
             <div className="relative z-10">
-              <div className="flex items-center justify-between mb-8">
+              <div className="mb-8 flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs font-semibold uppercase text-gray-400 tracking-wider">
+                  <h3 className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
                     Monthly Revenue
                   </h3>
-                  <p className="text-4xl font-bold text-indigo-500 mt-3">$48,290</p>
-                  <p className="text-xs text-indigo-400/70 mt-1">All channels combined</p>
+                  <p className="mt-3 font-bold text-4xl text-indigo-500">$48,290</p>
+                  <p className="mt-1 text-indigo-400/70 text-xs">All channels combined</p>
                 </div>
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
-                  <Zap className="w-12 h-12 text-indigo-500/30" />
+                  <Zap className="h-12 w-12 text-indigo-500/30" />
                 </motion.div>
               </div>
               <div className="space-y-2">
-                <div className="flex justify-between text-xs mb-2">
+                <div className="mb-2 flex justify-between text-xs">
                   <span className="text-gray-400">Target Progress</span>
-                  <span className="text-indigo-400 font-semibold">65%</span>
+                  <span className="font-semibold text-indigo-400">65%</span>
                 </div>
-                <div className="w-full bg-neutral-800 rounded-full h-2 overflow-hidden">
+                <div className="h-2 w-full overflow-hidden rounded-full bg-neutral-800">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "65%" }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                    className="bg-indigo-500 h-2 rounded-full"
+                    className="h-2 rounded-full bg-indigo-500"
                   ></motion.div>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-semibold mt-3">↑ 8% from last month</p>
+              <p className="mt-3 font-semibold text-indigo-400 text-xs">↑ 8% from last month</p>
             </div>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-            className="border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl"
           >
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="mb-8 flex items-center gap-4">
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <Database className="w-7 h-7 text-indigo-500" />
+                  <Database className="h-7 w-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">Database Performance</h3>
-                  <p className="text-xs text-indigo-400 font-semibold mt-1">
+                  <h3 className="font-bold text-lg text-white">Database Performance</h3>
+                  <p className="mt-1 font-semibold text-indigo-400 text-xs">
                     ↑ 23% faster than baseline
                   </p>
                 </div>
@@ -228,9 +228,9 @@ export default function BentoGrid() {
                   />
                 </LineChart>
               </ResponsiveContainer>
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-neutral-800">
-                <span className="text-xs text-gray-400">Health Status</span>
-                <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-bold rounded-full">
+              <div className="mt-4 flex items-center justify-between border-neutral-800 border-t pt-4">
+                <span className="text-gray-400 text-xs">Health Status</span>
+                <span className="rounded-full bg-indigo-500/10 px-3 py-1 font-bold text-indigo-400 text-xs">
                   OPTIMAL
                 </span>
               </div>
@@ -241,50 +241,50 @@ export default function BentoGrid() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className="border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl"
           >
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="mb-8 flex items-center gap-4">
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  <Lock className="w-7 h-7 text-indigo-500" />
+                  <Lock className="h-7 w-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">Security Posture</h3>
-                  <p className="text-xs text-indigo-400 font-semibold mt-1">Enterprise Grade</p>
+                  <h3 className="font-bold text-lg text-white">Security Posture</h3>
+                  <p className="mt-1 font-semibold text-indigo-400 text-xs">Enterprise Grade</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-indigo-500/5 rounded-lg">
+                <div className="flex items-center justify-between rounded-lg bg-indigo-500/5 p-3">
                   <div className="flex items-center gap-3">
                     <motion.div
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
-                      <CheckCircle2 className="w-5 h-5 text-indigo-500" />
+                      <CheckCircle2 className="h-5 w-5 text-indigo-500" />
                     </motion.div>
-                    <span className="text-sm font-semibold text-white">SSL/TLS Encryption</span>
+                    <span className="font-semibold text-sm text-white">SSL/TLS Encryption</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">TLS 1.3</span>
+                  <span className="font-bold text-indigo-400 text-xs">TLS 1.3</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-indigo-500/5 rounded-lg">
+                <div className="flex items-center justify-between rounded-lg bg-indigo-500/5 p-3">
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm font-semibold text-white">2FA Authentication</span>
+                    <CheckCircle2 className="h-5 w-5 text-indigo-500" />
+                    <span className="font-semibold text-sm text-white">2FA Authentication</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">ENABLED</span>
+                  <span className="font-bold text-indigo-400 text-xs">ENABLED</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-indigo-500/5 rounded-lg">
+                <div className="flex items-center justify-between rounded-lg bg-indigo-500/5 p-3">
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-indigo-500" />
-                    <span className="text-sm font-semibold text-white">End-to-End Encrypted</span>
+                    <CheckCircle2 className="h-5 w-5 text-indigo-500" />
+                    <span className="font-semibold text-sm text-white">End-to-End Encrypted</span>
                   </div>
-                  <span className="text-xs text-indigo-400 font-bold">AES-256</span>
+                  <span className="font-bold text-indigo-400 text-xs">AES-256</span>
                 </div>
               </div>
-              <p className="text-xs text-indigo-400 font-bold mt-6 text-center">✓ 100% SECURE</p>
+              <p className="mt-6 text-center font-bold text-indigo-400 text-xs">✓ 100% SECURE</p>
             </div>
           </motion.div>
 
@@ -292,19 +292,19 @@ export default function BentoGrid() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl border border-neutral-800 p-8 shadow-lg transition-shadow hover:shadow-xl"
           >
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="mb-8 flex items-center gap-4">
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 2.5, repeat: Infinity }}
                 >
-                  <Code2 className="w-7 h-7 text-indigo-500" />
+                  <Code2 className="h-7 w-7 text-indigo-500" />
                 </motion.div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">Development Activity</h3>
-                  <p className="text-xs text-indigo-400 font-semibold mt-1">
+                  <h3 className="font-bold text-lg text-white">Development Activity</h3>
+                  <p className="mt-1 font-semibold text-indigo-400 text-xs">
                     142 commits this month
                   </p>
                 </div>
@@ -324,9 +324,9 @@ export default function BentoGrid() {
                   <Bar dataKey="value2" fill="#4f46e5" radius={6} isAnimationActive={true} />
                 </BarChart>
               </ResponsiveContainer>
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-neutral-800">
-                <span className="text-xs text-gray-400">Last 6 Months</span>
-                <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-bold rounded-full">
+              <div className="mt-4 flex items-center justify-between border-neutral-800 border-t pt-4">
+                <span className="text-gray-400 text-xs">Last 6 Months</span>
+                <span className="rounded-full bg-indigo-500/10 px-3 py-1 font-bold text-indigo-400 text-xs">
                   +32% GROWTH
                 </span>
               </div>

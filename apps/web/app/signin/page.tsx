@@ -1,6 +1,7 @@
 "use client";
 
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
@@ -40,11 +41,11 @@ export default function Page() {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center p-4 pt-20 pb-6 overflow-hidden">
-      <div className="flex-1 flex items-center justify-center w-full">
+    <div className="flex h-screen flex-col items-center overflow-hidden p-4 pt-20 pb-6">
+      <div className="flex w-full flex-1 items-center justify-center">
         <div className="w-full max-w-md">
           <div className="text-center">
-            <h1 className="text-3xl font-medium mb-2">Welcome to Stealth</h1>
+            <h1 className="mb-2 font-medium text-3xl">Welcome to Stealth</h1>
             <p className="text-muted-foreground text-sm">Sign in to your account</p>
           </div>
 
@@ -58,7 +59,7 @@ export default function Page() {
                   type="email"
                   placeholder="xyz@gmail.com"
                   required
-                  className="!bg-transparent h-10 text-base rounded-md border border-border focus-visible:border-border focus-visible:ring-0"
+                  className="!bg-transparent h-10 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 
@@ -67,7 +68,7 @@ export default function Page() {
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <Link
                     href="#"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground text-sm transition-colors hover:text-foreground"
                   >
                     Forgot password?
                   </Link>
@@ -77,16 +78,16 @@ export default function Page() {
                   name="password"
                   type="password"
                   required
-                  className="!bg-transparent h-10 text-base rounded-md border border-border focus-visible:border-border focus-visible:ring-0"
+                  className="!bg-transparent h-10 rounded-md border border-border text-base focus-visible:border-border focus-visible:ring-0"
                 />
               </Field>
 
-              {error && <p className="text-sm text-destructive text-center">{error}</p>}
+              {error && <p className="text-center text-destructive text-sm">{error}</p>}
 
               <Field>
                 <Button
                   type="submit"
-                  className="w-full cursor-pointer text-primary-foreground h-12 text-base rounded-full"
+                  className="h-12 w-full cursor-pointer rounded-full text-base text-primary-foreground"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -101,7 +102,7 @@ export default function Page() {
 
               <div className="relative my-2">
                 <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t border-border" />
+                  <span className="w-full border-border border-t" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
                   <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
@@ -112,16 +113,22 @@ export default function Page() {
                 <Button
                   type="button"
                   onClick={googleSignIn}
-                  className="w-full cursor-pointer flex items-center justify-center gap-2 text-primary-foreground h-12 text-base rounded-full"
+                  className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full text-base text-primary-foreground"
                 >
-                  <img src="/icons/google.svg" alt="Google" className="size-5" />
+                  <Image
+                    src="/icons/google.svg"
+                    alt="Google"
+                    width={20}
+                    height={20}
+                    className="size-5"
+                  />
                   Continue with Google
                 </Button>
               </Field>
 
-              <p className="text-center text-sm text-muted-foreground">
+              <p className="text-center text-muted-foreground text-sm">
                 Don&apos;t have an account?{" "}
-                <Link href="/signup" className="hover:text-foreground transition-colors">
+                <Link href="/signup" className="transition-colors hover:text-foreground">
                   Sign up
                 </Link>
               </p>
@@ -130,18 +137,18 @@ export default function Page() {
         </div>
       </div>
 
-      <p className="shrink-0 mt-6 text-center text-sm text-muted-foreground">
+      <p className="mt-6 shrink-0 text-center text-muted-foreground text-sm">
         By signing in you agree to our{" "}
         <Link
           href="#"
-          className="underline underline-offset-4 hover:text-foreground transition-colors"
+          className="underline underline-offset-4 transition-colors hover:text-foreground"
         >
           Terms
         </Link>{" "}
         &amp;{" "}
         <Link
           href="#"
-          className="underline underline-offset-4 hover:text-foreground transition-colors"
+          className="underline underline-offset-4 transition-colors hover:text-foreground"
         >
           Privacy Policy
         </Link>

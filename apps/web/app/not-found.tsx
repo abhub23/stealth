@@ -10,16 +10,16 @@ export default function NotFound() {
     <>
       <Navbar />
       <main className="relative overflow-hidden bg-background">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-125 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
+        <div className="absolute top-0 left-1/2 h-125 w-full max-w-3xl -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background opacity-70 blur-3xl" />
 
         <section className="relative flex min-h-screen items-center justify-center pt-32 pb-24 md:pt-44 md:pb-32">
           <Container className="relative z-10 w-full">
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-              <span className="block bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/15 font-bold leading-[0.8] tracking-tighter text-[clamp(96px,26vw,240px)]">
+              <span className="block bg-linear-to-b from-foreground to-foreground/15 bg-clip-text font-bold text-[clamp(96px,26vw,240px)] text-transparent leading-[0.8] tracking-tighter">
                 404
               </span>
 
-              <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance md:text-xl">
+              <p className="mt-8 max-w-xl text-balance text-lg text-muted-foreground leading-relaxed md:text-xl">
                 The URL you requested doesn&apos;t exist, was moved, or was never shipped. Even our
                 agents couldn&apos;t find it.
               </p>

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "tw-animate-css";
 
 /* next-themes sets `.dark` on <html>, so drive the dark: variant off the class */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -145,8 +144,6 @@
   font-family:
     var(--font-roboto-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-}
-.fc-decoration {
 }
 .-left-380 {
   left: -380px;
