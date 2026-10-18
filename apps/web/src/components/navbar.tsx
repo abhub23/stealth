@@ -20,65 +20,68 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 py-2 pointer-events-none">
+    <nav className="pointer-events-none fixed top-0 right-0 left-0 z-50 px-4 py-2 transition-all duration-300 ease-in-out">
       <div
         className={cn(
-          "relative mx-auto flex items-center justify-between transition-all duration-300 ease-in-out pointer-events-auto h-16",
+          "pointer-events-auto relative mx-auto flex h-16 items-center justify-between transition-all duration-300 ease-in-out",
           isScrolled
-            ? "max-w-4xl md:px-2 bg-background/60 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg"
-            : "max-w-6xl md:px-8 bg-background/60 backdrop-blur-md border border-transparent rounded-md"
+            ? "max-w-4xl rounded-xl border border-white/10 bg-background/60 shadow-lg backdrop-blur-lg md:px-2"
+            : "max-w-6xl rounded-md border border-transparent bg-background/60 backdrop-blur-md md:px-8"
         )}
       >
-        <Link href="/" className="text-xl font-bold text-foreground ml-6">
+        <Link href="/" className="ml-6 font-bold text-foreground text-xl">
           Stealth
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8">
+        <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 md:flex">
           <Link
             href="#"
-            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground transition-colors hover:text-foreground/80"
           >
             Docs
           </Link>
           <Link
             href="/pricing"
-            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground transition-colors hover:text-foreground/80"
           >
             Pricing
           </Link>
           <Link
             href="/about"
-            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground transition-colors hover:text-foreground/80"
           >
             About
           </Link>
           <Link
             href="/privacy"
-            className="text-[15px] text-foreground hover:text-foreground/80 transition-colors"
+            className="text-[15px] text-foreground transition-colors hover:text-foreground/80"
           >
             Policy
           </Link>
         </div>
 
         {/* Desktop CTA & Mobile Toggle */}
-        <div className="flex items-center gap-3 mr-6">
+        <div className="mr-6 flex items-center gap-3">
           <ThemeToggle />
-          <div className="hidden md:flex items-center gap-8">
-            <Button asChild size="lg" className="rounded-md h-9 px-4 text-sm">
+          <div className="hidden items-center gap-8 md:flex">
+            <Button asChild size="lg" className="h-9 rounded-md px-4 text-sm">
               <Link href="/signin">Sign In</Link>
             </Button>
           </div>
 
           <button
-            className="md:hidden relative text-foreground focus:outline-none flex items-center justify-center transition-colors rounded-md size-8"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            className="relative flex size-8 items-center justify-center rounded-md text-foreground transition-colors focus:outline-none md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <TextAlignStart
-              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0 scale-50 -rotate-90" : "opacity-100 scale-100 rotate-0"}`}
+              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "-rotate-90 scale-50 opacity-0" : "rotate-0 scale-100 opacity-100"}`}
             />
             <X
-              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-50 rotate-90"}`}
+              className={`absolute size-5 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-50 opacity-0"}`}
             />
           </button>
         </div>
@@ -86,41 +89,41 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-4 right-4 mt-2 z-50 pointer-events-auto bg-background border border-muted-foreground/20 rounded-2xl shadow-2xl px-6 py-6 flex flex-col gap-4 overflow-hidden">
+        <div className="pointer-events-auto absolute top-full right-4 left-4 z-50 mt-2 flex flex-col gap-4 overflow-hidden rounded-2xl border border-muted-foreground/20 bg-background px-6 py-6 shadow-2xl md:hidden">
           <div className="flex flex-col gap-5">
             <Link
               href="#"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
+              className="font-medium text-[16px] text-foreground transition-colors hover:text-foreground/80"
             >
               Docs
             </Link>
             <Link
               href="/pricing"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
+              className="font-medium text-[16px] text-foreground transition-colors hover:text-foreground/80"
             >
               Pricing
             </Link>
             <Link
               href="/about"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
+              className="font-medium text-[16px] text-foreground transition-colors hover:text-foreground/80"
             >
               About
             </Link>
             <Link
               href="/privacy"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[16px] font-medium text-foreground hover:text-foreground/80 transition-colors"
+              className="font-medium text-[16px] text-foreground transition-colors hover:text-foreground/80"
             >
               Policy
             </Link>
           </div>
 
-          <div className="w-full h-px bg-white/10"></div>
+          <div className="h-px w-full bg-white/10"></div>
 
-          <Button asChild className="w-full rounded-md text-base h-auto py-1.5">
+          <Button asChild className="h-auto w-full rounded-md py-1.5 text-base">
             <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>
               Sign In
             </Link>

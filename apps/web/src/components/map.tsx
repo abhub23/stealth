@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 function Marker({
   src,
@@ -24,6 +25,7 @@ function Marker({
       className="absolute left-[calc(50%+var(--offset))] size-9.5 drop-shadow-[0_3px_1px_rgba(0,0,0,.15)]"
     >
       <svg fill="none" viewBox="0 0 38 38" className="absolute size-full">
+        <title>Map pin</title>
         <path
           d="M29.607 5.193c5.858 5.857 5.858 15.355 0 21.213l-9.9 9.9-.707.706-.708-.708-9.899-9.898c-5.857-5.858-5.857-15.356 0-21.213 5.858-5.858 15.356-5.858 21.214 0Z"
           className="fill-black/5 dark:fill-white/10"
@@ -33,15 +35,21 @@ function Marker({
           className="fill-white dark:fill-neutral-800"
         />
       </svg>
-      <img alt="" src={src} className="absolute top-1 left-1.75 size-6 rounded-full" />
+      <Image
+        alt=""
+        src={src}
+        width={24}
+        height={24}
+        className="absolute top-1 left-1.75 size-6 rounded-full"
+      />
     </motion.div>
   );
 }
 
-export function Map() {
+export function SiteMap() {
   return (
     <div aria-hidden="true" className="relative size-full">
-      <div className="absolute inset-0 bg-[url(/map.png)] mask-[linear-gradient(to_bottom,black_50%,transparent)] bg-size-[530px_430px] bg-position-[center_-75px] bg-no-repeat dark:opacity-60" />
+      <div className="mask-[linear-gradient(to_bottom,black_50%,transparent)] absolute inset-0 bg-[url(/map.png)] bg-position-[center_-75px] bg-size-[530px_430px] bg-no-repeat dark:opacity-60" />
       <div className="absolute inset-0">
         <Marker src="/map/1.jpg" top={96} offset={-128} delay={0.15} />
         <Marker src="/map/2.jpg" top={160} offset={-16} delay={0.4} />

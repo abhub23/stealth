@@ -44,10 +44,10 @@ export function BentoCard({
         <Subheading as="h3" className="dark:text-neutral-400">
           {eyebrow}
         </Subheading>
-        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-gray-950 dark:text-neutral-50">
+        <p className="mt-1 font-medium text-2xl/8 text-gray-950 tracking-tight dark:text-neutral-50">
           {title}
         </p>
-        <p className="mt-2 max-w-150 text-sm/6 text-gray-600 dark:text-neutral-400">
+        <p className="mt-2 max-w-150 text-gray-600 text-sm/6 dark:text-neutral-400">
           {description}
         </p>
       </div>

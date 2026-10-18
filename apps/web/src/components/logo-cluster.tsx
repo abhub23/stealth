@@ -1,6 +1,7 @@
 "use client";
 import { clsx } from "cn";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Mark } from "./logo";
 
 function Circle({ size, delay, opacity }: { size: number; delay: number; opacity: string }) {
@@ -62,7 +63,7 @@ function Logo({
   hover: { x: number; y: number; rotate: number; delay: number };
 }) {
   return (
-    <motion.img
+    <motion.div
       variants={{
         idle: { x: 0, y: 0, rotate: 0 },
         active: {
@@ -78,11 +79,17 @@ function Logo({
           },
         },
       }}
-      alt=""
-      src={src}
       style={{ left, top } as React.CSSProperties}
-      className="absolute size-16 rounded-full bg-white shadow-sm ring-1 ring-black/5 dark:bg-neutral-800 dark:ring-white/10"
-    />
+      className="absolute size-16"
+    >
+      <Image
+        alt=""
+        src={src}
+        width={64}
+        height={64}
+        className="size-full rounded-full bg-white shadow-sm ring-1 ring-black/5 dark:bg-neutral-800 dark:ring-white/10"
+      />
+    </motion.div>
   );
 }
 
