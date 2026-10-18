@@ -1,3 +1,11 @@
+function requireEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value;
+}
+
 const config = {
   app: {
     webUrl: process.env.WEB_URL || "http://localhost:3000",
@@ -5,12 +13,12 @@ const config = {
     port: Number(process.env.PORT) || 4000,
   },
   betterAuth: {
-    secret: process.env.BETTER_AUTH_SECRET!,
+    secret: requireEnv("BETTER_AUTH_SECRET"),
     url: process.env.BETTER_AUTH_URL || process.env.API_URL || "http://localhost:4000",
   },
   google: {
-    clientId: process.env.GOOGLE_CLIENT_ID!,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    clientId: requireEnv("GOOGLE_CLIENT_ID"),
+    clientSecret: requireEnv("GOOGLE_CLIENT_SECRET"),
   },
 };
 
